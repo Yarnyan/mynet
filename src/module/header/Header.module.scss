@@ -1,0 +1,67 @@
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header__container {
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__container_logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__container_logo img {
+    width: 60px;
+    height: 66px;
+}
+
+.header__container_logo h1 {
+    margin-left: 8px;
+    font-size: var(--titleSize);
+    color: var(--textColor)
+}
+
+.header__container_logo span {
+    color: var(--backgroundButton)
+}
+
+.header__container_nav {
+    width: 432px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__container_nav a {
+    font-size: var(--textSize);
+    color: var(--textColor);
+    font-weight: normal;
+}
+
+.header__container_btn button {
+    background-color: var(--backgroundButton);
+    color: var(--textColor);
+    width: 236px;
+    height: 44px;
+    border-radius: 8px;
+    font-family: 'minecraft-font';
+    cursor: pointer;
+    transition: .5s background-color;
+}
+
+
+
+.header__container_btn button:hover {
+    background-color: #f12f80;
+}
+
+.header__container_btn p {
+    font-size: var(--textSize);
+}
