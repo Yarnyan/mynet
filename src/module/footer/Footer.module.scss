@@ -75,12 +75,16 @@ a:not(.firstLink) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 136px;
     height: 32px;
-    margin-left: 300px;
+    margin-left: 253px;
+}
+
+.footer__conteint_social a:not(:first-child) {
+    margin-left: 22px;
 }
 
 .footer__conteint_social img {
     width: 28px;
     height: 32px;
+    color: #fff;
 }

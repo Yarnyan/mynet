@@ -24,9 +24,11 @@ export default function Footer() {
           <Link to={'/22'}>Наша команда</Link>
         </div>
         <div className={styles.footer__conteint_social}>
-          <Link target='_blank' to={'https://vk.com/im'}><img src="/icons/discord.svg" alt="" /></Link>
-          <Link><img src="/icons/YouTube.svg" alt="" /></Link>
-          <Link><img src="/icons/tiktok.svg" alt="" /></Link>
+          <Link target='_blank' to={'https://vk.com/MyNetMinecraft'}><img src="/icons/vk.svg" alt="" /></Link>
+          <Link target='_blank' to={'https://discord.gg/3puE4ybRCG'}><img src="/icons/discord.svg" alt="" /></Link>
+          <Link target='_blank' to={'https://t.me/MyNetMinecraft'}><img src="/icons/telegram.svg" alt="" /></Link>
+          <Link target='_blank' to={'https://discord.gg/3puE4ybRCG'}><img src="/icons/YouTube.svg" alt="" /></Link>
+          <Link target='_blank' to={'https://discord.gg/3puE4ybRCG'}><img src="/icons/tiktok.svg" alt="" /></Link>
         </div>
       </div>
     </div>
