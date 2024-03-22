@@ -1,0 +1,28 @@
+.Servers__container_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--textColor);
+    font-size: var(--textSize);
+}
+
+.Servers__container_online {
+    display: flex;
+    align-items: center;
+}
+
+.Servers__container_online img {
+    margin-left: 8px;
+}
+
+.Servers__container_server {
+    margin-top: 12px;
+    border-radius: 8px;
+    padding: 30px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--backgroundElementColor);
+    color: var(--textColor);
+    font-size: var(--textSize);
+}

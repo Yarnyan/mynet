@@ -1,0 +1,22 @@
+.home__container {
+    display: flex;
+    height: 100%;
+}
+
+.home__container_monitor {
+    margin: 32px 0 0 20px;
+}
+
+.home__container_servers {
+    margin-top: 32px;
+}
+
+.home__container_servers h1 {
+    font-size: var(--subtitleSize);
+    color: var(--textColor);
+    text-align: center;
+}
+
+.home__servers_content {
+    margin-top: 12px;
+}

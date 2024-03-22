@@ -1,0 +1,75 @@
+.Profile__container {
+    width: 405px;
+    padding: 32px;
+    border-radius: 8px;
+    background-color: var(--backgroundElementColor);
+}
+
+.Profile__container_information {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.Profile__container_balance {
+    margin-left: 32px;
+}
+
+.Profile__container_balance h1 {
+    color: var(--textColor);
+    font-size: 32px;
+}
+
+.balance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.balance p {
+    color: var(--anotherTextColor);
+    font-size: var(--textSize)
+}
+
+.apex {
+    margin-left: 12px;
+}
+
+.Profile__container_tools {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Profile__container_tools a {
+    display: inline-block;
+    max-width: max-content;
+    color: var(--textColor);
+    font-size: var(--textSize);
+}
+
+.Profile__tools_ref {
+    margin-top: 8px !important;
+}
+
+.Profile__btn {
+    margin-top: 16px;
+}
+
+.Profile__btn button {
+    background-color: var(--backgroundButton);
+    color: var(--textColor);
+    padding: 12px 0 12px 0;
+    width: 100%;
+    border-radius: 8px;
+    transition: .5s background-color;
+    height: 44px;
+    cursor: pointer;
+}
+
+.Profile__btn button:hover {
+    background-color: transparent !important;
+    border: 2px solid var(--backgroundButton);
+}

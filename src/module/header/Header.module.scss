@@ -1,5 +1,5 @@
 .header {
-    position: sticky;
+    position: relative !important;
     top: 0;
     width: 100%;
     height: 100%;
@@ -59,7 +59,8 @@
 
 
 .header__container_btn button:hover {
-    background-color: #f12f80;
+    background-color: transparent;
+    border: 2px solid var(--backgroundButton);
 }
 
 .header__container_btn p {

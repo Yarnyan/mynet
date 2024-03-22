@@ -20,7 +20,7 @@
     font-family: 'minecraft-font';
     src: url('../assets/fonts/minecraft-rus-regular1.ttf') format('truetype');
 
-  }
+}
 
 a {
     transition: .5s color;
@@ -30,8 +30,36 @@ a:hover {
     color: var(--backgroundButton)
 }
 
-button {
+.css-1sg8fd1-MuiButtonBase-root-MuiCheckbox-root {
+    padding: 0 !important;
+    border-radius: 8px !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--anotherTextColor);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+button,
+input,
+select {
     border: none;
+    font-family: 'minecraft-font';
     outline: none;
 }
 
@@ -40,11 +68,11 @@ a {
 }
 
 .Container {
-    padding: 0 120px;
+    max-width: 1680px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--backgroundColor);
 }
 
 .Content {
@@ -58,10 +86,8 @@ a {
 
 
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
     font-family: 'minecraft-font';
+    background-color: var(--backgroundColor);
     font-weight: normal;
 }
 
