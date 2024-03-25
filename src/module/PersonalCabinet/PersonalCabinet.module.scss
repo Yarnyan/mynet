@@ -1,0 +1,24 @@
+.PersonalCabinet__btn {
+    margin-top: 30px;
+    display: flex;
+    button:first-child {
+        margin-left: 0 !important;
+    }
+}
+
+.PersonalCabinet__btn button {
+    margin-left: 40px;
+    background-color: transparent;
+    color: var(--textColor);
+    font-size: var(--textSize);
+    cursor: pointer;
+    transition: .5s color;
+}
+
+.PersonalCabinet__btn button:hover {
+    color: var(--backgroundButton);
+}
+
+.active {
+    color: var(--backgroundButton);
+}

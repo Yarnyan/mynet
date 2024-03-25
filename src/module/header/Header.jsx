@@ -10,7 +10,7 @@ export default function Header() {
           <h1><span>My</span>Net</h1>
         </div>
         <div className={styles.header__container_nav}>
-          <Link to={'/2121'}>Главная</Link>
+          <Link to={'/'}>Главная</Link>
           <Link to={'/'}>Донат</Link>
           <Link to={'/'}>Сервера</Link>
           <Link to={'/'}>Правила</Link>

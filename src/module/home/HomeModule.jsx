@@ -5,13 +5,8 @@ import Auth from '../../components/auth/Auth'
 import Servers from '../../components/servers/Servers'
 import Profile from '../../components/profile/Profile'
 export default function HomeModule() {
-  const [token, setToken] = useState(localStorage.getItem('token'));
 
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    setToken(null);
-  };
-
+  const token = '11'
   return (
     <div className={styles.home__container}>
       <div className={styles.home__container_news}>
@@ -20,11 +15,7 @@ export default function HomeModule() {
       </div>
       <div className={styles.home__container_monitor}>
         <div className={styles.home__container_auth}>
-          {token ? (
-            <Profile handleLogout={handleLogout} />
-          ) : (
-            <Auth />
-          )}
+          {token ? <Profile /> : <Auth /> }
         </div>
         <div className={styles.home__container_servers}>
           <div className={styles.home__servers_subtitle}>

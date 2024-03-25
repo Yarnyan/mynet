@@ -170,3 +170,42 @@ body {
         font-size: 122px
     }
 }
+
+
+.home__container {
+    display: flex;
+    height: 100%;
+}
+
+.home__container_monitor {
+    margin: 32px 0 0 20px;
+}
+
+.home__container_servers {
+    margin-top: 32px;
+}
+
+.home__container_servers h1 {
+    font-size: var(--subtitleSize);
+    color: var(--textColor);
+    text-align: center;
+}
+
+.home__servers_content {
+    margin-top: 12px;
+}
+
+.tags {
+    display: inline-block; 
+    max-width: max-content;
+    padding: 12px 24px;
+    color: var(--textColor);
+    border-radius: 8px;
+    background-color: var(--backgroundButton);
+    margin-right: 8px;
+    margin-top: 4px;
+}
+
+.active {
+    color: var(--backgroundButton) !important;
+}

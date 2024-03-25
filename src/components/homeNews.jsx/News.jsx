@@ -20,7 +20,7 @@ export default function News() {
         </div>
         <div className={styles.News__container_infoDate}>
           <p>09.03.2024</p>
-          <Link>Посмотреть полностью</Link>
+          <Link to={'/news'}>Посмотреть полностью</Link>
         </div>
     </div>
   )
