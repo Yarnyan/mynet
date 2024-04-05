@@ -1,0 +1,46 @@
+.Servers {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Servers:not(:first-child) {
+    margin-top: 20px;
+}
+
+.Servers__about {
+    display: flex;
+}
+
+.Servers__about_name {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Servers__about_name p:first-child {
+    color: var(--textColor);
+}
+
+.Servers__about_name p:nth-child(2) {
+    color: var(--anotherTextColor)
+}
+
+.Servers a {
+    width: 300px;
+    padding: 12px 32px;
+    background-color: var(--backgroundButton);
+    color: var(--textColor);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .5s background-color;
+}
+
+.Servers a:hover {
+    background-color: #f12f80 !important;
+    color: #fff !important;
+}

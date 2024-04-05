@@ -1,0 +1,21 @@
+.Rules__container {
+    margin-top: 32px;
+    padding: 32px;
+    width: 100%;
+    background-color: var(--backgroundElementColor);
+    border-radius: 8px;    
+}
+
+.Rules__container h1 {
+    font-size: var(--subtitleSize);
+    color: var(--textColor)
+}
+
+.Rules__container_p {
+    margin-top: 16px;
+}
+
+.Rules__container_p p {
+    color: var(--textColor);
+    line-height: 1.3;
+}

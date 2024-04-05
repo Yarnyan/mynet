@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import Profile from '../../components/profile/Profile'
-import Servers from '../../components/servers/Servers'
+import ServersBar from '../../components/serversBar/ServersBar'
 import Information from '../../components/cabinet/Information'
+import Setting from '../../components/cabinet/Setting'
 import styles from './PersonalCabinet.module.scss'
 export default function PersonalCabinet() {
     const [activeComponent, setActiveComponent] = useState('information');
@@ -10,8 +11,8 @@ export default function PersonalCabinet() {
         switch (id) {
             case 'information':
                 return <Information />;
-            case 'profile':
-                return <Profile />;
+            case 'settings':
+                return <Setting />;
             case 'servers':
                 return <Servers />;
             case 'other':
@@ -25,10 +26,10 @@ export default function PersonalCabinet() {
             <div className='home__container_news'>
                 <div className={styles.PersonalCabinet__btn}>
                     <button onClick={() => setActiveComponent('information')} className={activeComponent === 'information' ? 'active' : ''}>Информация</button>
-                    <button onClick={() => setActiveComponent('servers')}>Настройки</button>
-                    <button>Магазин</button>
+                    <button onClick={() => setActiveComponent('settings')} className={activeComponent === 'settings' ? 'active' : ''}>Настройки</button>
+                    {/* <button>Магазин</button>
                     <button>История</button>
-                    <button>Корзина</button>
+                    <button>Корзина</button> */}
                 </div>
                 {renderComponentById(activeComponent)}
             </div>
@@ -41,7 +42,7 @@ export default function PersonalCabinet() {
                         <h1>Наши сервер</h1>
                     </div>
                     <div className='home__servers_content'>
-                        <Servers />
+                        <ServersBar />
                     </div>
                 </div>
             </div>

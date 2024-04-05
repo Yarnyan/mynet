@@ -11,9 +11,9 @@ export default function Header() {
         </div>
         <div className={styles.header__container_nav}>
           <Link to={'/'}>Главная</Link>
-          <Link to={'/'}>Донат</Link>
-          <Link to={'/'}>Сервера</Link>
-          <Link to={'/'}>Правила</Link>
+          <Link to={'/Donate'}>Донат</Link>
+          <Link to={'/Servers'}>Сервера</Link>
+          <Link to={'/Rules'}>Правила</Link>
         </div>
         <div className={styles.header__container_btn}>
           <button>

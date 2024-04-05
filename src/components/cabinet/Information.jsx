@@ -1,22 +1,68 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './Cabinet.module.scss';
 import ReactSkinview3d from "react-skinview3d"
 export default function Information() {
+    const fileInputRef = useRef(null);
+    const capeFileInputRef = useRef(null);
+    const [skinUrl, setSkinUrl] = useState("/image/Белогвардеец.png");
+    const [capeUrl, setCapeUrl] = useState("/image/E-Sound.png");
+    const handleSkinChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                setSkinUrl(reader.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
+    const handleClick = () => {
+        fileInputRef.current.click();
+    };
+
+    const handleCapeChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                setCapeUrl(reader.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+    const handleCapeClick = () => {
+        capeFileInputRef.current.click();
+    };
     return (
         <div className={styles.Cabinet__container}>
+            <input
+                type="file"
+                accept=".png, .jpg, .jpeg"
+                ref={fileInputRef}
+                style={{ display: 'none' }}
+                onChange={handleSkinChange}
+            />
+            <input
+                type="file"
+                accept=".png, .jpg, .jpeg"
+                ref={capeFileInputRef}
+                style={{ display: 'none' }}
+                onChange={handleCapeChange}
+            />
             <div className={styles.Cabinet__container_items}>
                 <div className={styles.Cabinet__skin}>
                     <div className={styles.skin}>
                         <ReactSkinview3d
-                            skinUrl="/image/Белогвардеец.png"
-                            capeUrl="/image/E-Sound.png"
+                            skinUrl={skinUrl}
+                            capeUrl={capeUrl}
                             height="250"
                             width="208"
                         />
                     </div>
                     <div className={styles.Cabinet__skin_btn}>
-                        <button>Сменить скин</button>
-                        <button>Сменить плащ</button>
+                        <button onClick={handleClick}>Сменить скин</button>
+                        <button onClick={handleCapeClick}>Сменить плащ</button>
                     </div>
                 </div>
                 <div className={styles.Cabinet__information_user}>

@@ -1,0 +1,29 @@
+.select__server {
+    width: 100%;
+    height: auto;
+    margin-left: 8px;
+}
+
+.donate__container {
+    margin-top: 32px;
+    padding: 29px;
+    width: 100%;
+    background-color: var(--backgroundElementColor);
+    border-radius: 8px;
+}
+
+.custom__select {
+    width: 250px;
+    background-color: var(--backgroundElementColor);
+}
+
+.donate__container_items {
+    display: flex;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.DonateComponent:not(:first-child) {
+    margin-top: 12px;
+    margin-left: 21px;
+}

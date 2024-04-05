@@ -20,7 +20,7 @@ export default function Profile() {
         </div>
         <div className={styles.Profile__container_tools}>
             <Link to={'/PersonalCabinet'}>Личный кабинет</Link>
-            <Link className={styles.Profile__tools_ref}>Реферальная система</Link>
+            <Link className={styles.Profile__tools_ref} to={'/ReferralSistem'}>Реферальная система</Link>
         </div>
         <div className={styles.Profile__btn}>
             <button onClick={handleLogout}>Выйти</button>

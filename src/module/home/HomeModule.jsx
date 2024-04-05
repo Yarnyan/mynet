@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import styles from './Home.module.scss'
 import News from '../../components/homeNews.jsx/News'
 import Auth from '../../components/auth/Auth'
-import Servers from '../../components/servers/Servers'
+import ServersBar from '../../components/serversBar/ServersBar'
 import Profile from '../../components/profile/Profile'
 export default function HomeModule() {
 
@@ -22,7 +22,7 @@ export default function HomeModule() {
             <h1>Наши сервер</h1>
           </div>
           <div className={styles.home__servers_content}>
-            <Servers />
+            <ServersBar />
           </div>
         </div>
       </div>

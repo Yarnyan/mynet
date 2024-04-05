@@ -35,6 +35,18 @@ a:hover {
     border-radius: 8px !important;
 }
 
+button {
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--textColor);
+    transition: .5s background;
+    background-color: var(--backgroundButton);
+}
+
+button:hover {
+    background-color: transparent;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
@@ -195,6 +207,10 @@ body {
     margin-top: 12px;
 }
 
+.home__container_news {
+    flex-grow: 1;
+}
+
 .tags {
     display: inline-block; 
     max-width: max-content;
@@ -208,4 +224,18 @@ body {
 
 .active {
     color: var(--backgroundButton) !important;
+}
+
+.css-13cymwt-control {
+    background-color: var(--backgroundElementColor) !important;
+}
+
+.css-1dimb5e-singleValue {
+    color: #fff !important;
+}
+
+.css-t3ipsp-control {
+    background-color: var(--backgroundElementColor) !important;
+    border-color: hsl(0, 0%, 80%) !important;
+    box-shadow: none !important;
 }
