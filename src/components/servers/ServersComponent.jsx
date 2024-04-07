@@ -12,7 +12,7 @@ export default function ServersComponent() {
         </div>
       </div>
       <div className={styles.Servers__version}>
-        <Link>Посетить</Link>
+        <Link to="/Servers/HiTech">Посетить</Link>
       </div>
     </div>
   )

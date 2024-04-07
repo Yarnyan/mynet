@@ -1,0 +1,103 @@
+.Server__container_header {
+    margin-top: 32px;
+    display: flex;
+}
+
+.Server__header_online {
+    background-color: var(--backgroundElementColor);
+    display: flex;
+    border-radius: 8px;
+    padding: 32px;
+    align-items: center;
+    width: 688px;
+}
+
+.Server__header_online img {
+    margin: 0 !important;
+}
+
+.about__progress {
+    margin-left: 32px;
+}
+
+.version,
+.online {
+    font-size: var(--textSize);
+    color: var(--textColor)
+}
+
+.online {
+    text-align: end;
+}
+
+.bar {
+    margin: 6px 0 6px 0;
+    width: 399px;
+    height: 32px !important;
+    border-radius: 8px;
+}
+
+.bar span {
+    background-color: var(--backgroundButton);
+}
+
+.modeInformation {
+    background-color: var(--backgroundElementColor);
+    display: flex;
+    border-radius: 8px;
+    padding: 32px;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 547px;
+}
+
+.modeInformation {
+    color: var(--textColor);
+    font-size: var(--textSize);   
+}
+
+.modeInformation span {
+    color: var(--backgroundButton)
+}
+
+.modeInformation__subtitle {
+    margin-bottom: 4px;
+}
+
+.modeInformation__title {
+    margin-top: 8px;
+}
+
+.PersonalCabinet__btn button {
+    margin-top: 32px;
+    background-color: transparent;
+    color: var(--textColor);
+    font-size: var(--textSize);
+    cursor: pointer;
+    transition: .5s color;
+}
+
+.PersonalCabinet__btn button:not(:first-child) {
+    margin-left: 40px;
+}
+
+.PersonalCabinet__btn button:hover {
+    color: var(--backgroundButton);
+}
+
+.active {
+    color: var(--backgroundButton);
+}
+
+.server__content {
+    margin-top: 12px;
+    background-color: var(--backgroundElementColor);
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.server__content_personnel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

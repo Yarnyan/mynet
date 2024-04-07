@@ -11,9 +11,9 @@ export default function Footer() {
         </div>
         <div className={styles.footer__container_information}>
           <p>Полезная информация</p>
-          <Link className={styles.firstLink} to={'/22'}>Начать играть</Link>
+          <Link className={styles.firstLink} to={'/Start'}>Начать играть</Link>
           <Link to={'/22'}>Скачать лаунчер</Link>
-          <Link to={'/22'}>Регистрация</Link>
+          <Link to={'/registration'}>Регистрация</Link>
           <Link to={'/22'}>Правила проекта</Link>
           <Link to={'/22'}>Форум</Link>
         </div>

@@ -1,0 +1,72 @@
+.RegistrationModule {
+    width: 405px;
+    padding: 30px 20px;
+    border-radius: 8px;
+    background-color: var(--backgroundElementColor);
+}
+
+.Auth__container_form {
+    margin-top: 32px;
+}
+
+.Auth__container_subtitle h1 {
+    text-align: center;
+    font-size: var(--subtitleSize);
+    color: var(--textColor)
+}
+
+.Auth__container_form input {
+    padding: 12px;
+    height: 44px;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    color: var(--textColor);
+    width: 100%;
+    margin: 4px 0;
+}
+
+.Auth__container_form input::placeholder {
+    color: var(--anotherTextColor)
+}
+
+input:focus {
+    background-color: white;
+    color: #1E1E1E;
+}
+
+.Radio__auth {
+    margin-top: 8px;
+}
+
+.Radio__auth a,
+.Radio__auth label {
+    color: var(--anotherTextColor);
+    margin-left: 8px;
+}
+
+.Radio__auth a {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.Checkbox__input path {
+    width: 24px;
+    height: 24px;
+    color: var(--backgroundButton);
+    border-radius: 40px;
+}
+
+.Auth__btn {
+    background-color: var(--backgroundButton) !important;
+    cursor: pointer;
+    margin-top: 12px;
+    color: #fff;
+    width: 365px;
+    transition: .5s background-color;
+    margin-top: 12px !important; 
+}
+
+.Auth__btn:hover {
+    background-color: transparent !important;
+    border: 2px solid var(--backgroundButton);
+}
