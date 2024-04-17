@@ -11,7 +11,6 @@ import RulesList from "./pages/RulesList"
 import Referral from "./pages/Referral"
 import Server from "./pages/Server"
 import Start from "./pages/Start"
-import Registration from "./pages/Registration"
 function App() {
   return (
     <BrowserRouter>
@@ -25,7 +24,6 @@ function App() {
         <Route path='/ReferralSistem' element={<Referral />} />
         <Route path='/Servers/:server' element={<Server />} />
         <Route path='/start' element={<Start />} />
-        <Route path='/registration' element={<Registration />} />
         <Route path='*' element={<Navigate to="/404" />} />
         <Route path='/404' element={<NotFound />} />
       </Routes>

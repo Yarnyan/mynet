@@ -226,6 +226,11 @@ input:focus {
     background-color: #1E1E1E;
     cursor: pointer;
     display: flex;
+    transition: .5s all;
+}
+
+.Cabinet__panel_actions:hover {
+    background-color: var(--backgroundButton);
 }
 
 .Cabinet__panel_actions img {
@@ -252,4 +257,10 @@ input:focus {
 
 .Cabinet__panel_actions img {
     margin: 0 !important;
+}
+
+.Cabinet__modalWindow {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

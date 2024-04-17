@@ -27,7 +27,7 @@
     margin-top: 10px;
 }
 
-.StartPlayingComponent a {
+.StartPlayingComponent button {
     padding: 12px 32px;
     background-color: var(--backgroundButton);
     color: var(--textColor);
@@ -37,7 +37,7 @@
     transition: .5s all;
 }
 
-.StartPlayingComponent a:hover {
+.StartPlayingComponent button:hover {
     background-color: #f12f80 !important;
     color: #fff !important;
 }

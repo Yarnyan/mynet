@@ -27,9 +27,6 @@ export default function PersonalCabinet() {
                 <div className={styles.PersonalCabinet__btn}>
                     <button onClick={() => setActiveComponent('information')} className={activeComponent === 'information' ? 'active' : ''}>Информация</button>
                     <button onClick={() => setActiveComponent('settings')} className={activeComponent === 'settings' ? 'active' : ''}>Настройки</button>
-                    {/* <button>Магазин</button>
-                    <button>История</button>
-                    <button>Корзина</button> */}
                 </div>
                 {renderComponentById(activeComponent)}
             </div>

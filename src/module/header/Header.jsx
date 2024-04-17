@@ -5,10 +5,10 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.header__container}>
-        <div className={styles.header__container_logo}>
+        <Link className={styles.header__container_logo} to={'/'}>
           <img src="/logo.png" alt="" />
           <h1><span>My</span>Net</h1>
-        </div>
+        </Link>
         <div className={styles.header__container_nav}>
           <Link to={'/'}>Главная</Link>
           <Link to={'/Donate'}>Донат</Link>

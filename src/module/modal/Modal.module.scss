@@ -1,0 +1,84 @@
+.centeredModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--backgroundElementColor);
+    padding: 50px;
+    min-width: 600px;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+}
+
+.centeredModal label {
+    font-size: var(--textSize);
+    color: var(--anotherTextColor);
+}
+
+.centeredModal input {
+    border-radius: 8px;
+    min-width: 373px;
+    width: 100%;
+    height: 44px;
+    padding: 12px;
+    background-color: #1E1E1E;
+    color: var(--anotherTextColor);
+    margin-top: 8px;
+}
+
+.modalInput {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.modalFooter button,
+.osButtons button {
+    border: 2px solid var(--backgroundButton);
+    padding: 10px 12px;
+    width: 180px;
+    color: var(--textColor);
+    transition: 0.5s background;
+    background-color: var(--backgroundButton);
+    margin-top: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.generator__btn {
+    border: 2px solid var(--backgroundButton);
+    padding: 10px 12px;
+    width: 100%;
+    color: var(--textColor);
+    transition: 0.5s background;
+    background-color: var(--backgroundButton);
+    margin-top: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.centeredModal th,
+.centeredModal td {
+    padding: 10px; /* Задаем отступы внутри ячеек таблицы */
+    text-align: left;
+}
+
+.centeredModal th {
+    color: #fff;
+}
+
+.centeredModal td {
+    color: #fff; /* Цвет текста в ячейках таблицы */
+    margin-right: 20px; /* Добавляем отступ между ячейками */
+}

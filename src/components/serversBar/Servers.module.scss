@@ -26,3 +26,26 @@
     color: var(--textColor);
     font-size: var(--textSize);
 }
+
+.ZeroPlayers {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #666767;
+}
+
+.NoZeroPlayers {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ED5D9A;
+}
+
+.server__span {
+    display: flex;
+    align-items: center;
+}
+
+.server__span > div {
+    margin-left: 5px;
+}
