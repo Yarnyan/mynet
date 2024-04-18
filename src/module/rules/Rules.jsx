@@ -19,7 +19,7 @@ export default function Rules() {
                 </div>
                 <div className='home__container_servers'>
                     <div className='home__servers_subtitle'>
-                        <h1>Наши сервер</h1>
+                        <h1>Наши сервера</h1>
                     </div>
                     <div className='home__servers_content'>
                         <ServersBar />

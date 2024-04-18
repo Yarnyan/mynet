@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Servers.module.scss'
 export default function ServersBar() {
     const magicPlayersCount = 1228;
-    const magicPlayersCountOff = 0;
+    const magicPlayersCountOff = 'offline';
     return (
         <div className={styles.Servers__container}>
             <div className={styles.Servers__container_title}>
@@ -25,9 +25,9 @@ export default function ServersBar() {
                 <div className={styles.Servers__container_server}>
                     <div className={styles.server__span}>
                         <p>Magic</p>
-                        {magicPlayersCountOff === 0 && <div className={styles.ZeroPlayers}></div>}
+                        {magicPlayersCountOff === 'offline' && <div className={styles.ZeroPlayers}></div>}
                     </div>
-                    <p>0</p>
+                    <p>offline</p>
                 </div>
                 <div className={styles.Servers__container_server}>
                     <div className={styles.server__span}>
@@ -39,9 +39,9 @@ export default function ServersBar() {
                 <div className={styles.Servers__container_server}>
                     <div className={styles.server__span}>
                         <p>Magic</p>
-                        {magicPlayersCountOff === 0 && <div className={styles.ZeroPlayers}></div>}
+                        {magicPlayersCountOff === 'offline' && <div className={styles.ZeroPlayers}></div>}
                     </div>
-                    <p>0</p>
+                    <p>offline</p>
                 </div>
             </div>
         </div>

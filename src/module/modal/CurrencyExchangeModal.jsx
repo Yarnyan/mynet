@@ -28,8 +28,7 @@ const CurrencyExchangeModal = ({ isOpen, toggle, minExchangeRate }) => {
                     <div className={styles.modalInput}>
                         <label>Аксы:</label>
                         <Input
-                            type="number"
-                            value={amountInCurrency}
+                            type="text"
                             onChange={handleAmountChange}
                             placeholder="Введите сумму"
                         />
@@ -48,6 +47,7 @@ const CurrencyExchangeModal = ({ isOpen, toggle, minExchangeRate }) => {
                     </Button>
                 </ModalFooter>
             </Modal>
+            
         </>
     );
 };

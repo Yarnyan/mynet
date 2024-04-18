@@ -19,7 +19,7 @@ export default function HomeModule() {
         </div>
         <div className={styles.home__container_servers}>
           <div className={styles.home__servers_subtitle}>
-            <h1>Наши сервер</h1>
+            <h1>Наши сервера</h1>
           </div>
           <div className={styles.home__servers_content}>
             <ServersBar />

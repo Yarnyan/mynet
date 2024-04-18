@@ -17,12 +17,12 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/news' element={<NewsFlashPage />} />
-        <Route path='/PersonalCabinet' element={<PersonalCabinetPage />} />
-        <Route path='/Donate' element={<DonateList />} />
-        <Route path='/Servers' element={<ServerList />} />
-        <Route path='/Rules' element={<RulesList />} />
-        <Route path='/ReferralSistem' element={<Referral />} />
-        <Route path='/Servers/:server' element={<Server />} />
+        <Route path='/personalCabinet' element={<PersonalCabinetPage />} />
+        <Route path='/donate' element={<DonateList />} />
+        <Route path='/servers' element={<ServerList />} />
+        <Route path='/rules' element={<RulesList />} />
+        <Route path='/referralSistem' element={<Referral />} />
+        <Route path='/servers/:server' element={<Server />} />
         <Route path='/start' element={<Start />} />
         <Route path='*' element={<Navigate to="/404" />} />
         <Route path='/404' element={<NotFound />} />

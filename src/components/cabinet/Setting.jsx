@@ -25,9 +25,18 @@ export default function Setting() {
   const toggleModal = (type) => {
     if (modalType === type) {
       setModalType(null); 
+      resetScroll();
     } else {
       setModalType(type);
+      setTimeout(() => {
+        resetScroll();
+      }, 1);
     }
+  };
+
+  const resetScroll = () => {
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0; 
   };
 
   const renderModal = () => {
@@ -77,6 +86,9 @@ export default function Setting() {
     <div className={styles.Cabinet__container}>
       <div className={styles.Cabinet__container_items}>
         <div className={styles.Cabinet__container_password}>
+          <div className={styles.Cabinet__modalWindow}>
+            {renderModal()}
+          </div>
           <p className={styles.prev__password_p}>Старый пароль</p>
           <input type="password" placeholder='Пароль от аккаунта' required />
           <p className={styles.new__password_p}>Новый пароль</p>
@@ -152,9 +164,6 @@ export default function Setting() {
               <h1>Изменить ник игрока</h1>
               <p>Вы можете изменять ники игроков</p>
             </div>
-          </div>
-          <div className={styles.Cabinet__modalWindow}>
-            {renderModal()}
           </div>
         </div>
       </div>
