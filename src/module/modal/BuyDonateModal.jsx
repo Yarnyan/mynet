@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, FormGroup, Label, Form } from 'reactstrap';
 import styles from './Modal.module.scss'
-// import RedeemIcon from '@mui/icons-material/Redeem';
+import RedeemIcon from '@mui/icons-material/Redeem';
 const BuyDonateModal = ({ isOpen, toggle, onAddTag }) => {
     const [tagName, setTagName] = useState('');
 
@@ -47,7 +47,9 @@ const BuyDonateModal = ({ isOpen, toggle, onAddTag }) => {
                         </Input>
                         <div style={{ display: 'flex', alignItems: 'center', marginTop: '20px'}}>
                             <button style={{width: '140px', height: '40px', border: '2px solid #ED5D9A'}}>Купить</button>
-                            <button></button>
+                            <button style={{ width: '40px', height: '40px', borderRadius: '8px', marginLeft: '12px'}}>
+                                <RedeemIcon />
+                            </button>
                         </div>
                     </ModalBody>
                     <ModalBody className={styles.modalInput} style={{ marginLeft: '100px', display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
