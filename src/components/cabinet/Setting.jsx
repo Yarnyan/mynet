@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import styles from './Cabinet.module.scss'
 import CurrencyExchangeModal from '../../module/modal/CurrencyExchangeModal'
 import CurrencyConverterModal from '../../module/modal/CurrencyConverterModal'
@@ -21,22 +21,23 @@ import UpdateStaffModal from '../../module/modal/UpdateStaffModal'
 export default function Setting() {
 
   const [modalType, setModalType] = useState(null);
-
+  const scrollRef = useRef(0);
   const toggleModal = (type) => {
     if (modalType === type) {
-      setModalType(null); 
-      resetScroll();
+      scrollRef.current = window.pageYOffset
+      setModalType(null);
+      restoreScroll();
     } else {
+      scrollRef.current = window.pageYOffset
       setModalType(type);
       setTimeout(() => {
-        resetScroll();
+        restoreScroll();
       }, 1);
     }
   };
 
-  const resetScroll = () => {
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0; 
+  const restoreScroll = () => {
+    window.scrollTo(0, scrollRef.current);
   };
 
   const renderModal = () => {
@@ -48,35 +49,35 @@ export default function Setting() {
       case 'promo':
         return <PromoCodeActivationModal isOpen={true} toggle={() => toggleModal('promo')} />
       case 'promoHistory':
-        return <PromoCodeManagerModal isOpen={true} toggle={() => toggleModal('promoHistory')}/>
+        return <PromoCodeManagerModal isOpen={true} toggle={() => toggleModal('promoHistory')} />
       case 'playerAdd':
-        return <PlayerAddModal isOpen={true} toggle={() => toggleModal('playerAdd')}/>
+        return <PlayerAddModal isOpen={true} toggle={() => toggleModal('playerAdd')} />
       case 'playerDelete':
-        return <PlayerDeleteModal isOpen={true} toggle={() => toggleModal('playerDelete')}/>
+        return <PlayerDeleteModal isOpen={true} toggle={() => toggleModal('playerDelete')} />
       case 'playerBan':
-        return <PlayerBanModal isOpen={true} toggle={() => toggleModal('playerBan')}/>
+        return <PlayerBanModal isOpen={true} toggle={() => toggleModal('playerBan')} />
       case 'playerUnban':
-        return <PlayerUnbanModal isOpen={true} toggle={() => toggleModal('playerUnban')}/>
+        return <PlayerUnbanModal isOpen={true} toggle={() => toggleModal('playerUnban')} />
       case 'playerBroadcast':
-        return <PlayerBroadcastModal isOpen={true} toggle={() => toggleModal('playerBroadcast')}/>
+        return <PlayerBroadcastModal isOpen={true} toggle={() => toggleModal('playerBroadcast')} />
       case 'changePassword':
-        return <ChangePasswordModal isOpen={true} toggle={() => toggleModal('changePassword')}/>
+        return <ChangePasswordModal isOpen={true} toggle={() => toggleModal('changePassword')} />
       case 'changeNickname':
-        return <ChangeNicknameModal isOpen={true} toggle={() => toggleModal('changeNickname')}/>
+        return <ChangeNicknameModal isOpen={true} toggle={() => toggleModal('changeNickname')} />
       case 'addNews':
-        return <AddNewsModal isOpen={true} toggle={() => toggleModal('addNews')}/>
+        return <AddNewsModal isOpen={true} toggle={() => toggleModal('addNews')} />
       case 'addTag':
-        return <AddTagModal isOpen={true} toggle={() => toggleModal('addTag')}/>
+        return <AddTagModal isOpen={true} toggle={() => toggleModal('addTag')} />
       case 'addPrivilege':
-        return <AddPrivilegeModal isOpen={true} toggle={() => toggleModal('addPrivilege')}/>
+        return <AddPrivilegeModal isOpen={true} toggle={() => toggleModal('addPrivilege')} />
       case 'addServer':
-        return <AddServerModal isOpen={true} toggle={() => toggleModal('addServer')}/>
+        return <AddServerModal isOpen={true} toggle={() => toggleModal('addServer')} />
       case 'createPromoCode':
-        return <CreatePromoCodeModal isOpen={true} toggle={() => toggleModal('createPromoCode')}/>
+        return <CreatePromoCodeModal isOpen={true} toggle={() => toggleModal('createPromoCode')} />
       case 'addStaff':
-        return <AddStaffModal isOpen={true} toggle={() => toggleModal('addStaff')}/>
+        return <AddStaffModal isOpen={true} toggle={() => toggleModal('addStaff')} />
       case 'updateStaff':
-        return <UpdateStaffModal isOpen={true} toggle={() => toggleModal('updateStaff')}/>
+        return <UpdateStaffModal isOpen={true} toggle={() => toggleModal('updateStaff')} />
       default:
         return null;
     }

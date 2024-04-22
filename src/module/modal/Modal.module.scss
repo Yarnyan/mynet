@@ -82,3 +82,24 @@
     color: #fff; /* Цвет текста в ячейках таблицы */
     margin-right: 20px; /* Добавляем отступ между ячейками */
 }
+
+.Radio__auth {
+    margin-top: 8px;
+}
+
+.Radio__auth a,
+.Radio__auth label {
+    color: var(--anotherTextColor);
+    margin-left: 8px;
+}
+
+.Radio__auth a {
+    word-wrap: break-word;
+    word-break: break-all;
+    transition: .5s color;
+    color: var(--anotherTextColor);
+}
+
+.Radio__auth a:hover {
+    color: var(--backgroundButton);
+}

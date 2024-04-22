@@ -43,11 +43,22 @@
     font-size: var(--textSize)
 }
 
-.footer__container a {
+.footer__container a,
+.footer__container button {
     color: var(--anotherTextColor);
     font-size: var(--textSize);
     display: inline-block; 
     max-width: max-content;
+}
+
+.footer__container button {
+    background-color: transparent;
+    margin-top: 4px;
+    transition: .5s color;
+}
+
+.footer__container button:hover {
+    color: var(--backgroundButton);
 }
 
 .footer__container_information {

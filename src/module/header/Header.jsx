@@ -1,25 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import styles from './Header.module.scss'
 import { Link } from "react-router-dom";
 import LauncherDownloadModal from '../modal/LauncherDownloadModal';
 export default function Header() {
   const [showLauncherModal, setShowLauncherModal] = useState(false);
+  const scrollRef = useRef(0);
+
   const openLauncherModal = () => {
+    scrollRef.current = window.pageYOffset
     setShowLauncherModal(true);
     setTimeout(() => {
-      resetScroll();
+      restoreScroll()
     }, 1);
   };
 
   const closeLauncherModal = () => {
     setShowLauncherModal(false);
-    setTimeout(() => {
-      resetScroll();
-    }, 1);
   };
-  const resetScroll = () => {
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0; 
+
+  const restoreScroll = () => {
+    window.scrollTo(0, scrollRef.current);
   };
   return (
     <div className={styles.header}>
