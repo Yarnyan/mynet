@@ -110,6 +110,9 @@ export default function Setting() {
             <button onClick={() => toggleModal('addTag')}>Добавить тег новости</button>
             <button onClick={() => toggleModal('addPrivilege')}>Добавить привилегию</button>
             <button>Добавить сервер</button>
+            <button>Удалить сервер</button>
+            <button>Добавить мод</button>
+            <button>Удалить мод</button>
             <button onClick={() => toggleModal('createPromoCode')}>Создать промокод</button>
             <button onClick={() => toggleModal('addStaff')}>Добавить персонал</button>
             <button onClick={() => toggleModal('updateStaff')}>Изменить персонал</button>

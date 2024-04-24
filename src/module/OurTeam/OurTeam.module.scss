@@ -1,0 +1,22 @@
+.ourTeam__container {
+    margin-top: 32px;
+    display: flex;
+}
+
+.ourTeam__container_content {
+    background-color: var(--backgroundElementColor);
+    border-radius: 8px;
+    padding: 32px;
+    align-items: center;
+    width: 100%
+}
+
+.ourTeam__container_content p {
+    font-size: 24px;
+    color: var(--textColor)
+}
+
+.ourTeam__container_content span {
+    margin-left: 6px;
+    color: var(--anotherTextColor);
+}

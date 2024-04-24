@@ -11,7 +11,6 @@ export default function NewsFull() {
         <div className={styles.home__container}>
             <div className={styles.home__container_news}>
                 <NewsFlash />
-                <NewsFlash />
             </div>
             <div className={styles.home__container_monitor}>
                 <div className={styles.home__container_auth}>

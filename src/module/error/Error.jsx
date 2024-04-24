@@ -7,8 +7,8 @@ export default function Error() {
                 <div className="notfound-404">
                     <h1>4<span>0</span>4</h1>
                 </div>
-                <p>The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
-                <Link to="/">home page</Link>
+                <p>Страница, которую вы ищете, могла быть удалена, ее название изменилось или она временно недоступна..</p>
+                <Link to="/">Главная страница</Link>
             </div>
         </div>
     )

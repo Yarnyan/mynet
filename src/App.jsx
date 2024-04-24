@@ -13,6 +13,7 @@ import Server from "./pages/Server"
 import Start from "./pages/Start"
 import Licence from "./pages/Licence"
 import Processing from './pages/Processing'
+import Team from './pages/Team'
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +29,7 @@ function App() {
         <Route path='/start' element={<Start />} />
         <Route path='/licence' element={<Licence />} />
         <Route path='/processing' element={<Processing />} />
+        <Route path='/team' element={<Team />} />
         <Route path='*' element={<Navigate to="/404" />} />
         <Route path='/404' element={<NotFound />} />
       </Routes>

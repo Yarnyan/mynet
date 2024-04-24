@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styles from './Server.module.scss'
 import LinearProgress from '@mui/material/LinearProgress';
 import Profile from '../../components/profile/Profile'
@@ -7,17 +7,18 @@ import ServerDescription from '../../components/server/ServerDescription';
 import ServerCommands from '../../components/server/ServerCommands';
 import ServerPersonnel from '../../components/server/ServerPersonnel';
 import ServerRules from '../../components/server/ServerRules';
+import ServerInformation from '../../components/server/ServerInformation';
 export default function ServerModule() {
-    const [activeComponent, setActiveComponent] = useState('information');
+    const [activeComponent, setActiveComponent] = useState('mods');
     const renderComponentById = (id) => {
         switch (id) {
-            case 'information':
+            case 'mods':
                 let result = [];
                 for (let i = 0; i < 5; i++) {
                     result.push(<ServerDescription key={i} />);
                 }
                 return result;
-    
+
             case 'commands':
                 let resultCommands = [];
                 for (let i = 0; i < 5; i++) {
@@ -32,8 +33,10 @@ export default function ServerModule() {
                 return resultPersonnel;
             case 'rules':
                 return <ServerRules />;
+            case 'information':
+                return <ServerInformation />;
             default:
-                return null; 
+                return null;
         }
     };
     return (
@@ -47,7 +50,7 @@ export default function ServerModule() {
                                 Magic 1.12.2
                             </div>
                             <div className={styles.progress__bar}>
-                                <LinearProgress variant="determinate" value={100} className={styles.bar}/>
+                                <LinearProgress variant="determinate" value={100} className={styles.bar} />
                             </div>
                             <div className={styles.online}>
                                 100/100
@@ -64,10 +67,11 @@ export default function ServerModule() {
                     </div>
                 </div>
                 <div className={styles.PersonalCabinet__btn}>
-                    <button onClick={() => setActiveComponent('information')} className={activeComponent === 'information' ? 'active' : ''}>Описание</button>
+                    <button onClick={() => setActiveComponent('mods')} className={activeComponent === 'mods' ? 'active' : ''}>Моды</button>
                     <button onClick={() => setActiveComponent('commands')} className={activeComponent === 'commands' ? 'active' : ''}>Команды</button>
                     <button onClick={() => setActiveComponent('personnel')} className={activeComponent === 'personnel' ? 'active' : ''}>Персонал</button>
                     <button onClick={() => setActiveComponent('rules')} className={activeComponent === 'rules' ? 'active' : ''}>Правила</button>
+                    <button onClick={() => setActiveComponent('information')} className={activeComponent === 'information' ? 'active' : ''}>Описание</button>
                 </div>
                 <div className={`${styles.server__content} ${activeComponent === 'personnel' ? styles.server__content_personnel : ''}`}>
                     {renderComponentById(activeComponent)}

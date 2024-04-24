@@ -55,7 +55,7 @@ export default function Footer() {
           <p>Для пользователей</p>
           <Link className={styles.firstLink} to={'/licence'}>Лицензионное соглашение</Link>
           <Link to={'/processing'}>Политика обработки персональных данных</Link>
-          <Link to={'/22'}>Наша команда</Link>
+          <Link to={'/team'}>Наша команда</Link>
         </div>
         <div className={styles.footer__conteint_social}>
           <Link target='_blank' to={'https://vk.com/MyNetMinecraft'}><img src="/icons/vk.svg" alt="" /></Link>
