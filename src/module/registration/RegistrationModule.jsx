@@ -38,8 +38,8 @@ const RegistrationModule = ({ isOpen, toggle }) => {
                             Зарегистрироваться
                         </Button>
 
-                        <div style={{marginTop: '15px'}} className={styles.Radio__auth}>
-                            <Checkbox defaultChecked color="secondary"/>
+                        <div style={{marginTop: '15px', display: 'flex', alignItems: 'start', justifyContent: 'center'}} className={styles.Radio__auth}>
+                            <Checkbox defaultChecked color="secondary" style={{marginTop: '0xp'}} />
                             <Link to="/licence" style={{marginLeft: '5px'}}>
                                 Я полностью ознакомлен и принимаю правила и лицензионное соглашение, а также даю своё
                                 согласие на обработку персональных данных
