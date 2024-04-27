@@ -57,7 +57,7 @@ export default function Footer() {
           <Link to={'/processing'}>Политика обработки персональных данных</Link>
           <Link to={'/team'}>Наша команда</Link>
         </div>
-        <div className={styles.footer__conteint_social}>
+        <div className={styles.footer__content_social}>
           <Link target='_blank' to={'https://vk.com/MyNetMinecraft'}><img src="/icons/vk.svg" alt="" /></Link>
           <Link target='_blank' to={'https://discord.gg/3puE4ybRCG'}><img src="/icons/discord.svg" alt="" /></Link>
           <Link target='_blank' to={'https://t.me/MyNetMinecraft'}><img src="/icons/telegram.svg" alt="" /></Link>

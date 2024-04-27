@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <div className='Container'>
         <Header />
-        <div className="Content">
+        {/* <div className="Content">
             <HomeModule />
-        </div>
+        </div> */}
         <Footer />
     </div>
   )

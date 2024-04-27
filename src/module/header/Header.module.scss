@@ -1,68 +1,141 @@
 .header {
-    position: relative !important;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  position: relative !important;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
 }
 
 .header__container {
-    padding-top: 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
 }
 
 .header__container_logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header__container_logo img {
-    width: 60px;
-    height: 66px;
+  width: 60px;
+  height: 66px;
 }
 
 .header__container_logo h1 {
-    margin-left: 8px;
-    font-size: var(--titleSize);
-    color: var(--textColor)
+  margin-left: 8px;
+  font-size: var(--titleSize);
+  color: var(--textColor)
 }
 
 .header__container_logo span {
-    color: var(--backgroundButton)
+  color: var(--backgroundButton)
 }
 
 .header__container_nav {
-    width: 432px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 432px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__container_nav a {
-    font-size: var(--textSize);
-    color: var(--textColor);
-    font-weight: normal;
+  font-size: var(--textSize);
+  color: var(--textColor);
+  font-weight: normal;
 }
 
 .header__container_btn button {
-    background-color: var(--backgroundButton);
-    color: var(--textColor);
-    width: 236px;
-    height: 44px;
-    border-radius: 8px;
-    font-family: 'minecraft-font';
-    cursor: pointer;
-    transition: .5s background-color;
+  background-color: var(--backgroundButton);
+  color: var(--textColor);
+  width: 236px;
+  height: 44px;
+  border-radius: 8px;
+  font-family: 'minecraft-font';
+  cursor: pointer;
+  transition: .5s background-color;
 }
 
-
-
 .header__container_btn button:hover {
-    background-color: transparent;
-    border: 2px solid var(--backgroundButton);
+  background-color: transparent;
+  border: 2px solid var(--backgroundButton);
 }
 
 .header__container_btn p {
-    font-size: var(--textSize);
+  font-size: var(--textSize);
+}
+
+.header__container_burger {
+  display: none;
+  flex-direction: column;
+  background-color: transparent !important;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+}
+
+.header__container_burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--textColor);
+  transition: transform 0.4s ease, opacity .2s;
+}
+
+.header__container_burger.active span:first-child {
+  margin-left: 4px;
+  transform: rotate(45deg) translate(3px, 8px);
+}
+
+.header__container_burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__container_burger.active span:last-child {
+  margin-left: 4px;
+  transform: rotate(-45deg) translate(3px, -8px);
+}
+
+.show {
+  display: block !important;
+}
+
+.header__container_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #090909; //#090909
+  display: none;
+  z-index: 900;
+}
+
+
+@media (max-width: 500px) {
+  .header__container_burger {
+    display: flex;
+  }
+  .header__container {
+    padding: 16px 16px 0 16px;
+  }
+
+  .header__container_btn {
+    display: none;
+  }
+  .header__container_logo img {
+    width: 36px;
+    height: 42px;
+  }
+
+  .header__container_nav {
+    display: none;
+  }
+  .header__container_logo h1 {
+    margin-left: 4px;
+    font-size: 18px;
+  }
 }

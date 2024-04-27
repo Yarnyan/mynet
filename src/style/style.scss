@@ -290,11 +290,11 @@ body {
     color: #fff !important;
 }
 
-// .css-1sg8fd1-MuiButtonBase-root-MuiCheckbox-root.Mui-checked, .css-1sg8fd1-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
-//     color: var(--backgroundButton) !important;
-// }
-
 .MuiCheckbox-root {
     padding: 0px !important;
     color: var(--backgroundButton) !important;
+}
+
+.show {
+    display: block !important;
 }

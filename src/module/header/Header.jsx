@@ -1,16 +1,19 @@
-import React, { useState, useRef } from 'react'
-import styles from './Header.module.scss'
+import React, { useState, useRef } from 'react';
+import styles from './Header.module.scss';
 import { Link } from "react-router-dom";
 import LauncherDownloadModal from '../modal/LauncherDownloadModal';
+
 export default function Header() {
   const [showLauncherModal, setShowLauncherModal] = useState(false);
+  const [showNav, setShowNav] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(false);
   const scrollRef = useRef(0);
 
   const openLauncherModal = () => {
-    scrollRef.current = window.pageYOffset
+    scrollRef.current = window.pageYOffset;
     setShowLauncherModal(true);
     setTimeout(() => {
-      restoreScroll()
+      restoreScroll();
     }, 1);
   };
 
@@ -21,6 +24,12 @@ export default function Header() {
   const restoreScroll = () => {
     window.scrollTo(0, scrollRef.current);
   };
+
+  const toggleNav = () => {
+    setShowNav(!showNav);
+    setShowOverlay(!showOverlay);
+  };
+
   return (
     <div className={styles.header}>
       <div className={styles.header__container}>
@@ -28,7 +37,12 @@ export default function Header() {
           <img src="/logo.png" alt="" />
           <h1><span>My</span>Net</h1>
         </Link>
-        <div className={styles.header__container_nav}>
+        <button className={`${styles.header__container_burger} ${showNav ? styles.active : ''}`} onClick={toggleNav}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div className={`${styles.header__container_nav}`}>
           <Link to={'/'}>Главная</Link>
           <Link to={'/Donate'}>Донат</Link>
           <Link to={'/Servers'}>Сервера</Link>
@@ -40,9 +54,10 @@ export default function Header() {
           </button>
         </div>
       </div>
+      <div className={`${styles.header__container_overlay} ${showOverlay ? 'show' : ''}`}></div>
       {showLauncherModal && (
         <LauncherDownloadModal isOpen={showLauncherModal} toggle={closeLauncherModal} />
       )}
     </div>
-  )
+  );
 }
