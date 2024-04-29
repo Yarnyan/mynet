@@ -298,3 +298,9 @@ body {
 .show {
     display: block !important;
 }
+
+@media (max-width: 500px) {
+    .home__container_monitor {
+        display: none;
+    }
+}

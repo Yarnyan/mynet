@@ -16,10 +16,8 @@ const BuyDonateModal = ({ isOpen, toggle, onAddTag }) => {
             return;
         }
 
-        // Вызов колбэка для добавления тега
         onAddTag(tagName);
 
-        // Сброс поля и закрытие модального окна
         setTagName('');
         toggle();
     };

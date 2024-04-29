@@ -24,7 +24,7 @@ function App() {
         <Route path='/donate' element={<DonateList />} />
         <Route path='/servers' element={<ServerList />} />
         <Route path='/rules' element={<RulesList />} />
-        <Route path='/referralSistem' element={<Referral />} />
+        <Route path='/referralSystem' element={<Referral />} />
         <Route path='/servers/:server' element={<Server />} />
         <Route path='/start' element={<Start />} />
         <Route path='/licence' element={<Licence />} />

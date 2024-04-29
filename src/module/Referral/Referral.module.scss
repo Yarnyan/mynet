@@ -59,3 +59,42 @@
     border-radius: 8px;
     margin-top: 12px;
 }
+
+
+@media (max-width: 500px) {
+    .Referral {
+        padding: 16px;
+        flex-direction: column;
+    }
+    .ReferralLink,
+    .TopReferrals {
+        margin-top: 16px;
+    }
+
+    .Statistics h1,
+    .ReferralLink h1,
+    .TopReferrals h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .Statistics p,
+    .ReferralLink p,
+    .TopReferrals p {
+        font-size: 12px;
+    }
+    .TopReferrals {
+        padding: 16px;
+    }
+    .Statistics,
+    .ReferralLink {
+        padding: 16px;
+        width: auto;
+    }
+    .TopReferrals_user {
+        padding: 20px 16px;
+    }
+    .Statistics_invited,
+    .Statistics_earned {
+        padding: 20px 16px;
+    }
+}

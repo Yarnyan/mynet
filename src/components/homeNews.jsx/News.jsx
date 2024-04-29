@@ -8,9 +8,9 @@ export default function News() {
             <h1>ВАЙП И ОБНОВЛЕНИЕ TECHNOMAGICRPG</h1>
         </div>
         <div className={styles.News__container_tags}>
-          <div className={styles.tags}>ТЕГ ПРИМЕР</div>
-          <div className={styles.tags}>ТЕГ ПРИМЕР</div>
-          <div className={styles.tags}>ТЕСТ</div>
+          <div className={styles.tags}>Тег</div>
+          <div className={styles.tags}>Тег</div>
+          <div className={styles.tags}>Тест</div>
         </div>
         <div className={styles.News__container_image}>
           <img src="/image/newsImage.png" alt="" />
