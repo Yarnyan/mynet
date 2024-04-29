@@ -19,3 +19,25 @@
     margin: 12px 0;
     font-size: 14px;
 }
+
+@media (max-width: 500px) {
+    .Licence {
+        margin: 32px 16px 0 16px;
+        padding: 12px;
+        width: auto;
+    }
+    .Licence h1 {
+        color: var(--textColor);
+        margin: 12px 0;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    
+    
+    .Licence p {
+        line-height: 26px;
+        color: var(--anotherTextColor);
+        margin: 12px 0;
+        font-size: 12px;
+    }
+}
