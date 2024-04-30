@@ -42,3 +42,20 @@ img {
     padding: 12px 32px;
     border: 2px solid var(--backgroundButton);
 }
+
+@media (max-width: 500px) {
+    .donate {
+        width: 100%;
+        padding: 16px;
+    }
+    .donate__container_btn p {
+        font-size: 12px;
+    }
+    .donate__container h5 {
+        font-size: 18px;
+    }
+    .donate__container_btn button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}

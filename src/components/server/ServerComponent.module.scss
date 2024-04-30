@@ -71,3 +71,9 @@
     color: var(--textColor);
     line-height: 1.3;
 }
+
+@media (max-width: 500px) {
+    .ServerPersonnel {
+        width: auto;
+    }
+}

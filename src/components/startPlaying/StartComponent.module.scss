@@ -41,3 +41,19 @@
     background-color: #f12f80 !important;
     color: #fff !important;
 }
+
+
+@media (max-width: 500px) {
+    .StartPlayingComponent {
+        width: auto;
+        margin: 12px 16px;
+        height: 100%;
+        padding: 24px;
+    }
+    .content h1 {
+        font-size: 18px;
+    }
+    .content p {
+        font-size: 12px;
+    }
+}

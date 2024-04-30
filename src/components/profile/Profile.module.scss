@@ -73,3 +73,31 @@
     background-color: transparent !important;
     border: 2px solid var(--backgroundButton);
 }
+
+@media (max-width: 500px) {
+    .Profile__container {
+        width: auto;
+        padding: 16px;
+        margin-top: 16px;
+    }
+    .Profile__container img {
+        margin: 0;
+        height: 40px;
+        width: 40px;
+    }
+    .Profile__container_balance {
+        margin-left: 8px;
+    }
+    .Profile__container_balance h1 {
+        font-size: 18px;
+    }
+    .balance p {
+        font-size: 12px;
+    }
+    .Profile__container_tools a {
+        font-size: 12px;
+    }
+    .Profile__btn button {
+        height: 40px;
+    }
+}

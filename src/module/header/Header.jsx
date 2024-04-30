@@ -2,7 +2,8 @@ import React, { useState, useRef } from 'react';
 import styles from './Header.module.scss';
 import { Link } from "react-router-dom";
 import LauncherDownloadModal from '../modal/LauncherDownloadModal';
-
+import Auth from '../../components/auth/Auth';
+import Profile from '../../components/profile/Profile';
 export default function Header() {
   const [showLauncherModal, setShowLauncherModal] = useState(false);
   const [showNav, setShowNav] = useState(false);
@@ -54,7 +55,18 @@ export default function Header() {
           </button>
         </div>
       </div>
-      <div className={`${styles.header__container_overlay} ${showOverlay ? 'show' : ''}`}></div>
+      <div className={`${styles.header__container_overlay} ${showOverlay ? 'show' : ''}`}>
+        <div className={styles.header__burger_nav}>
+          <Link to={'/'}>Главная</Link>
+          <Link to={'/donate'}>Донат</Link>
+        </div>
+        <div className={styles.header__burger_nav2}>
+          <Link to={'/servers'}>Сервера</Link>
+          <Link to={'/rules'}>Правила</Link>
+        </div>
+        <Auth />
+        <Profile />
+      </div>
       {showLauncherModal && (
         <LauncherDownloadModal isOpen={showLauncherModal} toggle={closeLauncherModal} />
       )}

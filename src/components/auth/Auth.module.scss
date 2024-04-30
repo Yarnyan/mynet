@@ -96,3 +96,33 @@ input:focus {
 .Auth__tools:nth-child(2) {
     margin-top: 8px;
 }
+
+@media (max-width: 500px) {
+    .Auth__container {
+        width: auto;
+        padding: 30px 20px;
+        margin-top: 12px;
+    }
+    .Auth__container_form {
+        margin-top: 16px;
+    }
+    .Auth__container_subtitle h1 {
+        font-size: 18px;
+    }
+    .Auth__form input {
+        width: 100%;
+    }
+    .Radio__auth {
+        font-size: 12px;
+        width: 100%;
+    }
+    .Auth__tools {
+        margin-top: 16px;
+    }
+    .Auth__tools a {
+        font-size: 12px;
+    }
+    .Auth__btn {
+        height: 40px !important;
+    }
+}

@@ -27,3 +27,14 @@
     margin-top: 12px;
     margin-left: 21px;
 }
+
+@media (max-width: 500px) {
+    .donate__container {
+        padding: 12px;
+        margin: 32px 16px 0 16px;
+        width: auto;
+    }
+    .donate__container_items {
+        margin-top: 16px;
+    }
+}
