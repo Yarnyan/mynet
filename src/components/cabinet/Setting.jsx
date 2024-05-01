@@ -105,7 +105,7 @@ export default function Setting() {
             <button onClick={() => toggleModal('promoHistory')}>Список промокодов</button>
           </div>
           <div className={styles.Cabinet__opportunities_admin}>
-            <p>Возможности</p>
+            <p>Возможности админа</p>
             <button onClick={() => toggleModal('addNews')}>Добавить новость</button>
             <button onClick={() => toggleModal('addTag')}>Добавить тег новости</button>
             <button onClick={() => toggleModal('addPrivilege')}>Добавить привилегию</button>

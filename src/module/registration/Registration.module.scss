@@ -61,3 +61,29 @@ input:focus {
     width: 100% !important;
     height: 100% !important;
 }
+
+@media (max-width: 500px) {
+    .modal-body {
+        min-width: 0;
+        width: 100%;
+        padding: 16px;
+    }
+    .modal-body label {
+        font-size: 14px;
+    }
+    .modal-body h5 {
+        font-size: 18px;
+    }
+    .modal-body input {
+        width: 100% !important;
+        min-width: 0;
+    }
+    .modalFooter button {
+        width: auto;
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    .modal-content {
+        width: 250px;
+    }
+}

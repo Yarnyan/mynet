@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import LauncherDownloadModal from '../modal/LauncherDownloadModal';
 import Auth from '../../components/auth/Auth';
 import Profile from '../../components/profile/Profile';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 export default function Header() {
   const [showLauncherModal, setShowLauncherModal] = useState(false);
   const [showNav, setShowNav] = useState(false);
@@ -39,9 +41,7 @@ export default function Header() {
           <h1><span>My</span>Net</h1>
         </Link>
         <button className={`${styles.header__container_burger} ${showNav ? styles.active : ''}`} onClick={toggleNav}>
-          <span></span>
-          <span></span>
-          <span></span>
+          {showNav ? <CloseIcon /> : <MenuIcon />}
         </button>
         <div className={`${styles.header__container_nav}`}>
           <Link to={'/'}>Главная</Link>
@@ -64,7 +64,7 @@ export default function Header() {
           <Link to={'/servers'}>Сервера</Link>
           <Link to={'/rules'}>Правила</Link>
         </div>
-        <Auth />
+        {/* <Auth /> */}
         <Profile />
       </div>
       {showLauncherModal && (

@@ -103,3 +103,38 @@
 .Radio__auth a:hover {
     color: var(--backgroundButton);
 }
+
+@media (max-width: 500px) {
+    .centeredModal {
+        min-width: 0;
+        padding: 16px;
+    }
+    .centeredModal label {
+        font-size: 14px;
+    }
+    .centeredModal h5 {
+        font-size: 18px;
+    }
+    .centeredModal input {
+        min-width: 0;
+        width: 100% !important;
+    }
+    .centeredModal button {
+        width: 100% !important;
+        font-size: 12px;
+    }
+    .modalFooter button {
+        width: auto;
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    .modal-content {
+        width: 250px;
+    }
+    .osButtons button {
+        margin: 0;
+    }
+    .osButtons button:nth-child(2) {
+        margin-top: 12px;
+    }
+}

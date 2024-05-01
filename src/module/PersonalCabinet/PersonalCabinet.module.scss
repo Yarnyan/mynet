@@ -22,3 +22,9 @@
 .active {
     color: var(--backgroundButton);
 }
+
+@media (max-width: 500px) {
+    .PersonalCabinet__btn {
+        margin-left: 16px;
+    }
+}
