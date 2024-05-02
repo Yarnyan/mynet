@@ -1,9 +1,17 @@
 import React from 'react'
 import styles from './News.module.scss'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 export default function News() {
+  const navigate = useNavigate()
+  function handleNewsClick() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 500) {
+      navigate('/news');
+    }
+  }
   return (
-    <div className={styles.News__container}>
+    <div className={styles.News__container} onClick={handleNewsClick}>
         <div className={styles.News__container_subtitle}>
             <h1>ВАЙП И ОБНОВЛЕНИЕ TECHNOMAGICRPG</h1>
         </div>

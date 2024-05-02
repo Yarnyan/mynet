@@ -68,6 +68,13 @@
     margin-top: 8px;
 }
 
+.PersonalCabinet__btn {
+    overflow-x: auto;
+    max-width: 90vw;
+    scrollbar-width: none; /* Для Firefox */
+    -ms-overflow-style: none; /* Для Internet Explorer и Edge */
+}
+
 .PersonalCabinet__btn button {
     margin-top: 32px;
     background-color: transparent;
@@ -100,4 +107,58 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+    .Server__container_header {
+        margin-top: 16px;
+        flex-direction: column;
+    }
+    .Server__header_online {
+        padding: 16px;
+        margin: 0 16px;
+        width: auto;
+        border-radius: 8px 8px 0 0;
+    }
+    .online,
+    .version {
+        font-size: 12px;
+    }
+    .Server__header_online img {
+        width: 60px;
+        height: 60px;
+    }
+    .about__progress {
+        margin-left: 8px;
+    }
+    .bar {
+        width: 228px;
+        height: 28px !important;
+    }
+    .modeInformation {
+        padding: 16px;
+        margin: 0 16px;
+        border-radius: 0 0 8px 8px;
+        width: auto;
+    }
+    .modeInformation p {
+        font-size: 12px;
+    }
+    .PersonalCabinet__btn {
+        display: flex;
+        margin: 8px 16px;
+        overflow-x: scroll;
+    }
+    .PersonalCabinet__btn button {
+        margin-left: 10px !important; 
+        margin-top: 8px;
+    }
+    .server__content {
+        padding: 16px;
+        margin: 16px 16px 0 16px;
+    }
+    .server__content img {
+        width: 100px;
+        height: 100px;
+    }
 }

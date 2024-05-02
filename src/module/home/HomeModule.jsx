@@ -10,7 +10,7 @@ export default function HomeModule() {
     <div className={styles.home__container}>
       <div className={styles.home__container_news}>
         <News />
-        {/* <News /> */}
+        <News />
       </div>
       <div className='home__container_monitor'>
         <div className='home__container_auth'>

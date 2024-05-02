@@ -108,6 +108,9 @@
     .centeredModal {
         min-width: 0;
         padding: 16px;
+        overflow-x: auto;
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
     }
     .centeredModal label {
         font-size: 14px;

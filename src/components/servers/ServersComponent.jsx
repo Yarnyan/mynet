@@ -1,9 +1,17 @@
 import React from 'react'
 import styles from './ServersComponent.module.scss'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 export default function ServersComponent() {
+  const navigate = useNavigate()
+  function handleServerClick() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 500) {
+      navigate('/servers/123');
+    }
+  }
   return (
-    <div className={styles.Servers}>
+    <div className={styles.Servers} onClick={handleServerClick}>
       <div className={styles.Servers__about}>
         <img src="/image/skin.png" alt="" />
         <div className={styles.Servers__about_name}>

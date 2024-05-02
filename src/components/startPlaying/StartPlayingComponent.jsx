@@ -58,7 +58,7 @@ export default function StartPlayingComponent({ id, subtitle, title, buttonTitle
                     {buttonTitle}
                 </button>
             ) : (
-                <button className={styles.button} onClick={() => navigate('/Servers')}>
+                <button className={styles.button} onClick={() => navigate('/servers')}>
                     {buttonTitle}
                 </button>
             )}

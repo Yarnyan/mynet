@@ -12,15 +12,15 @@ export default function NewsFull() {
             <div className={styles.home__container_news}>
                 <NewsFlash />
             </div>
-            <div className={styles.home__container_monitor}>
-                <div className={styles.home__container_auth}>
-                    {token ? <Profile /> : <Auth /> }
+            <div className='home__container_monitor'>
+                <div className='home__container_auth'>
+                    <Profile />
                 </div>
-                <div className={styles.home__container_servers}>
-                    <div className={styles.home__servers_subtitle}>
+                <div className='home__container_servers'>
+                    <div className='home__servers_subtitle'>
                         <h1>Наши сервера</h1>
                     </div>
-                    <div className={styles.home__servers_content}>
+                    <div className='home__servers_content'>
                         <ServersBar />
                     </div>
                 </div>
