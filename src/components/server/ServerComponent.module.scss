@@ -80,6 +80,9 @@
     .ServerDescription__content {
         align-items: start;
     }
+    .ServerDescription__content img {
+        display: none;
+    }
     .ServerDescription__about {
         margin-left: 4px;
     }
