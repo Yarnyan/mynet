@@ -1,0 +1,61 @@
+.donate {
+    width: 383px;
+    padding: 32px;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    margin: 12px 8px 0 8px;
+}
+
+.donate__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h5 {
+    color: var(--textColor);
+    font-size: var(--subtitleSize);
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-top: 12px;
+}
+
+img {
+    margin: 0 auto;
+}
+
+.donate__container_btn {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.donate__container_btn p {
+    color: var(--textColor);
+    font-size: var(--textSize)
+}
+
+.donate__container_btn button {
+    padding: 12px 32px;
+    border: 2px solid var(--backgroundButton);
+}
+
+@media (max-width: 500px) {
+    .donate {
+        width: 100%;
+        padding: 16px;
+    }
+    .donate__container_btn p {
+        font-size: 12px;
+    }
+    .donate__container h5 {
+        font-size: 18px;
+    }
+    .donate__container_btn button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}

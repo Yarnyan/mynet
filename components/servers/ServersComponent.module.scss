@@ -1,0 +1,76 @@
+.Servers {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Servers:not(:first-child) {
+    margin-top: 20px;
+}
+
+.Servers__about {
+    display: flex;
+}
+
+.Servers__about_name {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Servers__about_name p:first-child {
+    color: var(--textColor)
+}
+
+.Servers__p {
+    color: var(--anotherTextColor) !important;
+}
+
+.Servers__about_name span:nth-child(1) {
+    margin-left: 12px;
+    color: var(--anotherTextColor)
+}
+
+.Servers a {
+    width: 300px;
+    padding: 12px 32px;
+    background-color: var(--backgroundButton);
+    color: var(--textColor);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .5s background-color;
+}
+
+.Servers a:hover {
+    background-color: #f12f80 !important;
+    color: #fff !important;
+}
+
+@media (max-width: 500px) {
+    .Servers {
+        width: auto;
+        padding: 16px 0;
+        margin: 12px 16px;
+        flex-direction: column;
+    }
+    .Servers__about_name p {
+        font-size: 12px;
+    }
+    .Servers__about img {
+        display: none;
+        width: auto;
+        height: 100%    
+    }
+    .Servers__about_h1 {
+        font-size: 18px !important;
+    }
+    .Servers__about_desc {
+        margin-top: 8px !important;
+    }
+    .Servers__version {
+        display: none;
+    }
+}

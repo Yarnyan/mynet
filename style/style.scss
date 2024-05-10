@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --backgroundColor: #080908;
+    --backgroundElementColor: #131313;
+    --backgroundButton: #ED5D9A;
+    --textColor: #FFFFFF;
+    --anotherTextColor: #666767;
+    --textSize: 16px;
+    --subtitleSize: 32px;
+    --titleSize: 26px;
+    --mobileSize: 12px;
+}
+
+@font-face {
+    font-family: 'minecraft-font';
+    src: url('../assets/fonts/minecraft-rus-regular1.ttf') format('truetype');
+
+}
+
+a {
+    transition: .5s color;
+}
+
+a:hover {
+    color: var(--backgroundButton);
+}
+
+.css-1sg8fd1-MuiButtonBase-root-MuiCheckbox-root {
+    padding: 0 !important;
+    border-radius: 8px !important;
+}
+
+button {
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--textColor);
+    transition: .5s background;
+    background-color: var(--backgroundButton);
+}
+
+button:hover {
+    background-color: transparent;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--anotherTextColor);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+button,
+input,
+select {
+    border: none;
+    font-family: 'minecraft-font';
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Container {
+    max-width: 1680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.Content {
+    flex: 1;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'minecraft-font';
+    background-color: var(--backgroundColor);
+    font-weight: normal;
+    position: relative;
+}
+
+
+
+#notfound {
+    position: relative;
+    height: 100vh;
+    background-color: #222
+}
+
+#notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.notfound {
+    max-width: 460px;
+    width: 100%;
+    text-align: center;
+    line-height: 1.4
+}
+
+.notfound .notfound-404 {
+    height: 158px;
+    line-height: 153px
+}
+
+.notfound .notfound-404 h1 {
+    font-family: josefin sans, sans-serif;
+    color: #222;
+    font-size: 220px;
+    letter-spacing: 10px;
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 2px 2px 0 #c9c9c9, -2px -2px 0 #c9c9c9
+}
+
+.notfound .notfound-404 h1>span {
+    text-shadow: 2px 2px 0 #EE5F98, -2px -2px 0 #f06ba0, 0 0 8px #ec4a8b
+}
+
+.notfound p {
+    font-family: josefin sans, sans-serif;
+    color: #c9c9c9;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 15px
+}
+
+.notfound a {
+    font-family: josefin sans, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: 0 0;
+    color: #c9c9c9;
+    border: 2px solid #c9c9c9;
+    display: inline-block;
+    padding: 10px 25px;
+    font-weight: 700;
+    transition: .5s all;
+}
+
+.notfound a:hover {
+    color: #EE5F98;
+    border-color: #EE5F98
+}
+
+@media only screen and (max-width: 480px) {
+    .notfound .notfound-404 {
+        height: 122px;
+        line-height: 122px
+    }
+
+    .notfound .notfound-404 h1 {
+        font-size: 122px
+    }
+}
+
+
+.home__container {
+    display: flex;
+    height: 100%;
+}
+
+.home__container_monitor {
+    margin: 32px 0 0 20px;
+}
+
+.home__container_servers {
+    margin-top: 32px;
+}
+
+.home__container_servers h1 {
+    font-size: var(--subtitleSize);
+    color: var(--textColor);
+    text-align: center;
+}
+
+.home__servers_content {
+    margin-top: 12px;
+}
+
+.home__container_news {
+    flex-grow: 1;
+}
+
+.tags {
+    display: inline-block;
+    max-width: max-content;
+    padding: 12px 24px;
+    color: var(--textColor);
+    border-radius: 8px;
+    background-color: var(--backgroundButton);
+    margin-right: 8px;
+    margin-top: 4px;
+}
+
+.active {
+    color: var(--backgroundButton) !important;
+}
+
+.css-13cymwt-control {
+    background-color: var(--backgroundElementColor) !important;
+}
+
+.css-1dimb5e-singleValue {
+    color: #fff !important;
+}
+
+.css-t3ipsp-control {
+    background-color: var(--backgroundElementColor) !important;
+    border-color: hsl(0, 0%, 80%) !important;
+    box-shadow: none !important;
+}
+
+
+.rc-anchor-normal {
+    width: 120px !important;
+    height: 30px !important;
+}
+
+.modal-open {
+    padding-right: 0px !important;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+}
+
+.modal-header {
+    text-align: center;
+}
+
+.modal-header button {
+    display: none
+}
+
+.PrivateSwitchBase-input {
+    min-width: 24px !important;
+    width: 24px !important;
+    margin-top: 0px !important;
+    height: 24px !important;
+    color: #fff !important;
+}
+
+.MuiCheckbox-root {
+    padding: 0px !important;
+    color: var(--backgroundButton) !important;
+}
+
+.show {
+    display: block !important;
+
+    body {
+        overflow: hidden !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .home__container_monitor {
+        display: none;
+    }
+    .modal-content {
+        width: 300px !important;
+    }
+    .modal-body {
+        width: 100% !important;
+    }
+    .tags {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+}

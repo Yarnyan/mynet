@@ -1,0 +1,341 @@
+.Cabinet__container {
+    background-color: var(--backgroundElementColor);
+    padding: 32px;
+    width: 1255px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.Cabinet__container_items {
+    display: flex;
+    width: 100%;
+}
+
+.Cabinet__skin {
+    padding: 10px;
+    width: 405px;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+}
+
+.skin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Cabinet__skin_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 32px;
+}
+
+.Cabinet__skin_btn button {
+    background-color: var(--backgroundButton);
+    color: var(--textColor);
+    font-size: var(--textSize);
+    padding: 12px 14px;
+    border-radius: 8px;
+    transition: .5s background-color;
+    border: 2px solid var(--backgroundButton);
+    cursor: pointer;
+}
+
+.Cabinet__skin_btn button:hover {
+    background-color: transparent;
+}
+
+.Cabinet__information_user {
+    margin-left: 12px;
+}
+
+.user__information_block {
+    background-color: #DC3636 !important;
+}
+
+.user__information {
+    width: 523px;
+    height: 48px;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px;
+}
+
+.user__information:first-child {
+    margin-top: 0;
+}
+
+.user__information p {
+    color: var(--textColor);
+    font-size: var(--textSize)
+}
+
+.Cabinet__balance {
+    margin-left: 12px;
+}
+
+.Cabinet__balance_rub,
+.Cabinet__balance_apex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 37px;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    height: 138px;
+}
+
+.Cabinet__balance_apex {
+    margin-top: 12px;
+}
+
+.Cabinet__balance_btn {
+    margin-top: 12px;
+}
+
+.Cabinet__balance_btn button {
+    width: 100%;
+    height: 48px;
+    background-color: var(--backgroundButton);
+    border: 2px solid var(--backgroundButton);
+    transition: .5s background-color;
+    color: var(--textColor);
+    padding: 14px 65px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.Cabinet__balance_btn button:hover {
+    background-color: transparent;
+}
+
+.Cabinet__balance p {
+    color: var(--textColor);
+    font-size: var(--textSize)
+}
+
+.Cabinet__rub,
+.Cabinet__apex {
+    margin-left: 12px;
+}
+
+.apex,
+.rub {
+    margin-top: 6px;
+}
+
+//settings
+
+.Cabinet__container_password {
+    display: flex;
+    flex-direction: column;
+}
+
+.Cabinet__container_password p {
+    font-size: var(--textSize);
+    color: var(--anotherTextColor);
+}
+
+.Cabinet__container_password input {
+    border-radius: 8px;
+    width: 373px;
+    height: 44px;
+    padding: 12px;
+    background-color: #1E1E1E;
+    color: var(--anotherTextColor);
+}
+
+.new__password_p {
+    margin: 6px 0px;
+}
+
+.prev__password_p {
+    margin-bottom: 6px;
+}
+
+.Cabinet__container_password button {
+    border: 2px solid var(--backgroundButton);
+    width: 373px;
+    padding: 12px 106px;
+    color: var(--textColor);
+    transition: .5s background;
+    background-color: var(--backgroundButton);
+    margin-top: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.Cabinet__container_password button:hover {
+    background-color: transparent;
+}
+
+input:focus {
+    background-color: white;
+    color: #1E1E1E;
+}
+
+.Cabinet__container_opportunities {
+    margin-left: 20px;
+}
+
+.Cabinet__opportunities_user {
+    display: flex;
+    flex-direction: column;
+}
+
+.Cabinet__container_opportunities p {
+    font-size: var(--textSize);
+    color: var(--anotherTextColor);
+}
+
+.Cabinet__container_opportunities button {
+    width: 263px;
+    height: 40px;
+    margin: 7px 0;
+    border: 2px solid var(--backgroundButton);
+}
+
+.Cabinet__opportunities_admin {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Cabinet__container_panel {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.Cabinet__container_panel p {
+    font-size: var(--textSize);
+    color: var(--anotherTextColor);
+}
+
+.Cabinet__panel_actions {
+    width: 405px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin: 8px 0;
+    background-color: #1E1E1E;
+    cursor: pointer;
+    display: flex;
+    transition: .5s all;
+}
+
+.Cabinet__panel_actions:hover {
+    background-color: var(--backgroundButton);
+}
+
+.Cabinet__panel_actions img {
+    width: 40px;
+    height: 40px;
+}
+
+.Cabinet__actions_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 16px;
+}
+
+.Cabinet__actions_text p {
+    color: #fff;
+    font-size: 12px;
+}
+
+.Cabinet__actions_text h1 {
+    color: #fff;
+    font-size: 18px;
+}
+
+.Cabinet__panel_actions img {
+    margin: 0 !important;
+}
+
+@media (max-width: 500px) {
+    .Cabinet__container {
+        padding: 16px;
+        margin: 16px 16px 0 16px;
+        width: auto;
+    }
+    .Cabinet__container_items {
+        width: auto;
+        flex-direction: column;
+    }
+    .Cabinet__information_user {
+        margin: 16px 0 0 0;
+    }
+    .Cabinet__balance {
+        margin: 16px 0 0 0;
+    }
+    .user__information {
+        padding: 14px 16px;
+        width: auto;
+    }
+    .user__information p {
+        font-size: 10px;
+    }
+    .Cabinet__balance p {
+        font-size: 12px;
+    }
+    .Cabinet__skin {
+        width: 100%;
+    }
+    .Cabinet__skin_btn button{
+        padding: 8px 8px;
+        font-size: 12px;
+    }
+    .Cabinet__balance_btn button{
+        height: 40px;
+        font-size: 12px;
+        padding: 0;
+    }
+    .Cabinet__container_password {
+        width: 100%;
+    }
+    .Cabinet__container_password input {
+        width: 100%;
+        height: 40px;
+    }
+    .Cabinet__container_password button {
+        height: 40px;
+        width: auto;
+        width: 100%;
+        font-size: 12px;
+        padding: 0;
+    }
+    .Cabinet__container_opportunities {
+        margin: 16px 0 0 0;
+    }
+    .Cabinet__container_opportunities button {
+        font-size: 12px;
+        width: 100%;
+    }
+    .Cabinet__container_panel {
+        width: auto;
+        margin: 16px 0 0 0;
+    }
+    .Cabinet__panel_actions {
+        align-items: center;
+        width: 100%;
+    }
+    .Cabinet__panel_actions img {
+        width: 40px;
+        height: 40px;
+    }
+    .Cabinet__panel_actions h1 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .Cabinet__panel_actions p {
+        font-size: 10px;
+        margin-top: 2px;
+    }
+}
