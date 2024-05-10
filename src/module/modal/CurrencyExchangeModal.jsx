@@ -40,7 +40,7 @@ const CurrencyExchangeModal = ({ isOpen, toggle, minExchangeRate }) => {
                 </ModalBody>
                 <ModalFooter className={styles.modalFooter}>
                     <Button color="primary" onClick={handleExchange}>
-                        Обменять валюту
+                        Обменять
                     </Button>
                     <Button color="secondary" onClick={toggle}>
                         Отмена

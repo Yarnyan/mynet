@@ -64,7 +64,7 @@ const PlayerAddModal = ({ isOpen, toggle }) => {
                 </ModalBody>
                 <ModalFooter className={styles.modalFooter}>
                     <Button color="primary" onClick={handleAddPlayer}>
-                        Добавить игрока
+                        Добавить
                     </Button>
                     <Button color="secondary" onClick={toggle}>
                         Отмена

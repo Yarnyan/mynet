@@ -33,7 +33,7 @@ const PlayerDeleteModal = ({ isOpen, toggle }) => {
                 </ModalBody>
                 <ModalFooter className={styles.modalFooter}>
                     <Button color="danger" onClick={handleDeletePlayer}>
-                        Удалить игрока
+                        Удалить
                     </Button>
                     <Button color="secondary" onClick={toggle}>
                         Отмена

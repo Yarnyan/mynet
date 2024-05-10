@@ -110,6 +110,8 @@
         padding: 16px;
         overflow-x: auto;
         scrollbar-width: none; 
+        max-height: 90%;
+        overflow-y: auto;
         -ms-overflow-style: none; 
     }
     .centeredModal label {
@@ -139,5 +141,21 @@
     }
     .osButtons button:nth-child(2) {
         margin-top: 12px;
+    }
+    .donatContainer {
+        flex-direction: column;
+        height: 100%;
+        margin-top: 100px;
+    }
+    .modalInput {
+        margin-left: 0px !important;
+        width: auto !important;
+    }
+    .donatePossibilities {
+        width: auto !important; 
+    }
+    .modalInput button {
+        font-size: 12px;
+        padding: 8px 10px;
     }
 }

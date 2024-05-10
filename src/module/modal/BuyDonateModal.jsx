@@ -27,7 +27,7 @@ const BuyDonateModal = ({ isOpen, toggle, onAddTag }) => {
             {isOpen && <div className="modalOverlay" onClick={toggle} />}
             <Modal isOpen={isOpen} toggle={toggle} className={styles.centeredModal}>
                 <ModalHeader toggle={toggle}>Покупка привилегии</ModalHeader>
-                <div style={{ display: 'flex', marginTop: '20px', justifyContent: 'space-between', width: '100%' }}>
+                <div style={{ display: 'flex', marginTop: '20px', justifyContent: 'space-between', width: '100%' }} className={styles.donatContainer}>
                     <ModalBody className={styles.modalInput} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <p style={{ color: '#fff' }}>Pixelmon #2 1.12.2</p>
                         <img src="/image/modeLogo.png" alt="" style={{ marginTop: '20px' }} />
@@ -50,9 +50,9 @@ const BuyDonateModal = ({ isOpen, toggle, onAddTag }) => {
                             </button>
                         </div>
                     </ModalBody>
-                    <ModalBody className={styles.modalInput} style={{ marginLeft: '100px', display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
+                    <ModalBody className={styles.modalInput} style={{ marginLeft: '100px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <p style={{ color: '#fff' }}>Возможности привелегии</p>
-                        <div style={{ marginTop: '20px', width: '400px' }}>
+                        <div style={{ marginTop: '20px', width: '400px' }} className={styles.donatePossibilities}>
                             <div style={{ background: '#454646', display: 'flex', alignItems: 'center', height: '30px', padding: '0 10px', borderRadius: '2px' }}>
                                 <div style={{ background: '#ED5D9A', width: '10px', height: '10px', borderRadius: '50%' }}></div>
                                 <p style={{ color: '#fff', marginLeft: '8px' }}>Основное</p>
@@ -70,7 +70,7 @@ const BuyDonateModal = ({ isOpen, toggle, onAddTag }) => {
                                 <p style={{ color: '#fff', marginLeft: '8px' }}>Вход на заполненый сервер</p>
                             </div>
                         </div>
-                        <div style={{ marginTop: '20px', width: '400px' }}>
+                        <div style={{ marginTop: '20px', width: '400px' }} className={styles.donatePossibilities}>
                             <div style={{ background: '#454646', display: 'flex', alignItems: 'center', height: '30px', padding: '0 10px', borderRadius: '2px' }}>
                                 <div style={{ background: '#ED5D9A', width: '10px', height: '10px', borderRadius: '50%' }}></div>
                                 <p style={{ color: '#fff', marginLeft: '8px' }}>Киты</p>

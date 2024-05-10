@@ -81,7 +81,7 @@ const PlayerBanModal = ({ isOpen, toggle }) => {
                 </ModalBody>
                 <ModalFooter className={styles.modalFooter}>
                     <Button color="danger" onClick={handleBanPlayer}>
-                        Забанить игрока
+                        Забанить
                     </Button>
                     <Button color="secondary" onClick={toggle}>
                         Отмена

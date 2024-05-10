@@ -39,7 +39,7 @@ const AddTagModal = ({ isOpen, toggle, onAddTag }) => {
                 </ModalBody>
                 <ModalFooter className={styles.modalFooter}>
                     <Button color="primary" onClick={handleAddTag}>
-                        Добавить тег
+                        Добавить
                     </Button>
                     <Button color="secondary" onClick={toggle}>
                         Отмена
