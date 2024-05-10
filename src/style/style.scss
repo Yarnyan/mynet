@@ -253,7 +253,6 @@ body {
 }
 
 .modal-open {
-    overflow: visible !important;
     padding-right: 0px !important;
 }
 
@@ -311,7 +310,7 @@ body {
         width: 300px !important;
     }
     .modal-body {
-        width: 90% !important;
+        width: 100% !important;
     }
     .tags {
         padding: 6px 14px;
