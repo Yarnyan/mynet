@@ -30,7 +30,6 @@ const RegistrationModule = ({ isOpen, toggle }) => {
                                     console.log('CAPTCHA value:', value);
                                 }}
                                 className={styles.ReCAPTCHA}
-                                style={{width: '500px'}}
                             />
                         </div>
 

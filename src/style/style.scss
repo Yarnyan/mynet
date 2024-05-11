@@ -296,22 +296,22 @@ body {
 
 .show {
     display: block !important;
-
-    body {
-        overflow: hidden !important;
-    }
 }
 
 @media (max-width: 500px) {
     .home__container_monitor {
         display: none;
     }
+
     .modal-content {
         width: 300px !important;
+        max-height: 100%;
     }
+
     .modal-body {
         width: 100% !important;
     }
+
     .tags {
         padding: 6px 14px;
         font-size: 12px;

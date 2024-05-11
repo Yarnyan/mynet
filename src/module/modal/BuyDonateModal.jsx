@@ -25,7 +25,7 @@ const BuyDonateModal = ({ isOpen, toggle, onAddTag }) => {
     return (
         <>
             {isOpen && <div className="modalOverlay" onClick={toggle} />}
-            <Modal isOpen={isOpen} toggle={toggle} className={styles.centeredModal}>
+            <Modal isOpen={isOpen} toggle={toggle} className={`${styles.centeredModal} ${styles.centeredModalDonate}`}>
                 <ModalHeader toggle={toggle}>Покупка привилегии</ModalHeader>
                 <div style={{ display: 'flex', marginTop: '20px', justifyContent: 'space-between', width: '100%' }} className={styles.donatContainer}>
                     <ModalBody className={styles.modalInput} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>

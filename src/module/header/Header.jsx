@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from './Header.module.scss';
 import { Link } from "react-router-dom";
 import LauncherDownloadModal from '../modal/LauncherDownloadModal';
@@ -10,6 +10,7 @@ export default function Header() {
   const [showLauncherModal, setShowLauncherModal] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
+  const [bodyScrollDisabled, setBodyScrollDisabled] = useState(false);
   const scrollRef = useRef(0);
 
   const openLauncherModal = () => {
@@ -19,6 +20,14 @@ export default function Header() {
       restoreScroll();
     }, 1);
   };
+
+  useEffect(() => {
+    if (bodyScrollDisabled) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [bodyScrollDisabled]);
 
   const closeLauncherModal = () => {
     setShowLauncherModal(false);
@@ -31,6 +40,7 @@ export default function Header() {
   const toggleNav = () => {
     setShowNav(!showNav);
     setShowOverlay(!showOverlay);
+    setBodyScrollDisabled(!bodyScrollDisabled);
   };
 
   return (
