@@ -6,11 +6,11 @@ import Auth from '../../components/auth/Auth';
 import Profile from '../../components/profile/Profile';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { DONATE_ROUTE, HOME_ROUTE, RULES_ROUTE, SERVERS_ROUTE } from '../../routes/Route';
 export default function Header() {
   const [showLauncherModal, setShowLauncherModal] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
-  const [bodyScrollDisabled, setBodyScrollDisabled] = useState(false);
   const scrollRef = useRef(0);
 
   const openLauncherModal = () => {
@@ -20,14 +20,6 @@ export default function Header() {
       restoreScroll();
     }, 1);
   };
-
-  useEffect(() => {
-    if (bodyScrollDisabled) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }, [bodyScrollDisabled]);
 
   const closeLauncherModal = () => {
     setShowLauncherModal(false);
@@ -40,8 +32,15 @@ export default function Header() {
   const toggleNav = () => {
     setShowNav(!showNav);
     setShowOverlay(!showOverlay);
-    setBodyScrollDisabled(!bodyScrollDisabled);
   };
+
+  useEffect(() => {
+    if (showOverlay) {
+      document.body.classList.add('body__noScroll');
+    } else {
+      document.body.classList.remove('body__noScroll');
+    }
+  }, [showOverlay]);
 
   return (
     <div className={styles.header}>
@@ -54,10 +53,10 @@ export default function Header() {
           {showNav ? <CloseIcon /> : <MenuIcon />}
         </button>
         <div className={`${styles.header__container_nav}`}>
-          <Link to={'/'}>Главная</Link>
-          <Link to={'/Donate'}>Донат</Link>
-          <Link to={'/Servers'}>Сервера</Link>
-          <Link to={'/Rules'}>Правила</Link>
+          <Link to={HOME_ROUTE}>Главная</Link>
+          <Link to={DONATE_ROUTE}>Донат</Link>
+          <Link to={SERVERS_ROUTE}>Сервера</Link>
+          <Link to={RULES_ROUTE}>Правила</Link>
         </div>
         <div className={styles.header__container_btn}>
           <button onClick={openLauncherModal}>
@@ -67,12 +66,12 @@ export default function Header() {
       </div>
       <div className={`${styles.header__container_overlay} ${showOverlay ? 'show' : ''}`}>
         <div className={styles.header__burger_nav}>
-          <Link to={'/'}>Главная</Link>
-          <Link to={'/donate'}>Донат</Link>
+          <Link to={HOME_ROUTE}>Главная</Link>
+          <Link to={DONATE_ROUTE}>Донат</Link>
         </div>
         <div className={styles.header__burger_nav2}>
-          <Link to={'/servers'}>Сервера</Link>
-          <Link to={'/rules'}>Правила</Link>
+          <Link to={SERVERS_ROUTE}>Сервера</Link>
+          <Link to={RULES_ROUTE}>Правила</Link>
         </div>
         {/* <Auth /> */}
         <Profile />

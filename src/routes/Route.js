@@ -1,0 +1,13 @@
+export const HOME_ROUTE = "/"
+export const DONATE_ROUTE = "/donate"
+export const SERVERS_ROUTE = "/servers"
+export const SERVER_ROUTE = "/servers/:server"
+export const RULES_ROUTE = "/rules"
+export const START_GAME_ROUTE = "/start"
+export const LICENSE_ROUTE = "/licence"
+export const PROCESSING_ROUTE = "/processing"
+export const CABINET_ROUTE = "/cabinet"
+export const REFERRAL_ROUTE = "/referral"
+export const ARTICLE_ROUTE = "/article"
+export const ERROR_ROUTE = '/404'
+export const TEAM_ROUTE = '/team'

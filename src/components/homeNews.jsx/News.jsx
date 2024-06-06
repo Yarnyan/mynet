@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './News.module.scss'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import { ARTICLE_ROUTE } from '../../routes/Route'
 export default function News() {
   const navigate = useNavigate()
   function handleNewsClick() {
@@ -28,7 +29,7 @@ export default function News() {
         </div>
         <div className={styles.News__container_infoDate}>
           <p>09.03.2024</p>
-          <Link to={'/news'}>Посмотреть полностью</Link>
+          <Link to={ARTICLE_ROUTE}>Посмотреть полностью</Link>
         </div>
     </div>
   )

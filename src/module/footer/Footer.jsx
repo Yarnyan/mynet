@@ -3,6 +3,7 @@ import styles from './Footer.module.scss'
 import { Link } from 'react-router-dom'
 import LauncherDownloadModal from '../modal/LauncherDownloadModal';
 import RegistrationModule from '../registration/RegistrationModule';
+import { LICENSE_ROUTE, PROCESSING_ROUTE, RULES_ROUTE, TEAM_ROUTE } from '../../routes/Route';
 export default function Footer() {
   const [showLauncherModal, setShowLauncherModal] = useState(false);
   const [showRegistrationModal, setShowRegistrationModal] = useState(false);
@@ -48,14 +49,14 @@ export default function Footer() {
           <Link className={styles.firstLink} to={'/Start'}>Начать играть</Link>
           <button onClick={openLauncherModal}>Скачать лаунчер</button>
           <button onClick={openRegistrationModal}>Регистрация</button>
-          <Link to={'/rules'}>Правила проекта</Link>
+          <Link to={RULES_ROUTE}>Правила проекта</Link>
           <Link to={'/22'}>Форум</Link>
         </div>
         <div className={styles.footer__container_forUser}>
           <p>Для пользователей</p>
-          <Link className={styles.firstLink} to={'/licence'}>Лицензионное соглашение</Link>
-          <Link to={'/processing'}>Политика обработки персональных данных</Link>
-          <Link to={'/team'}>Наша команда</Link>
+          <Link className={styles.firstLink} to={LICENSE_ROUTE}>Лицензионное соглашение</Link>
+          <Link to={PROCESSING_ROUTE}>Политика обработки персональных данных</Link>
+          <Link to={TEAM_ROUTE}>Наша команда</Link>
         </div>
         <div className={styles.footer__content_social}>
           <Link target='_blank' to={'https://vk.com/MyNetMinecraft'}><img src="/icons/vk.svg" alt="" /></Link>

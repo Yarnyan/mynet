@@ -1,6 +1,6 @@
 
-import React from "react"
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom"
+import React, {useEffect} from "react"
+import { BrowserRouter, Route, Routes, Navigate, useLocation } from "react-router-dom"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import NewsFlashPage from "./pages/NewsFlashPage"
@@ -14,24 +14,35 @@ import Start from "./pages/Start"
 import Licence from "./pages/Licence"
 import Processing from './pages/Processing'
 import Team from './pages/Team'
+import { ERROR_ROUTE, HOME_ROUTE, DONATE_ROUTE, CABINET_ROUTE, ARTICLE_ROUTE, SERVERS_ROUTE, SERVER_ROUTE, REFERRAL_ROUTE, RULES_ROUTE, PROCESSING_ROUTE, LICENSE_ROUTE, START_GAME_ROUTE, TEAM_ROUTE  } from "./routes/Route"
 function App() {
+  function ScrollToTopOnLocationChange() {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  }
   return (
     <BrowserRouter>
+      <ScrollToTopOnLocationChange />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/news' element={<NewsFlashPage />} />
-        <Route path='/personalCabinet' element={<PersonalCabinetPage />} />
-        <Route path='/donate' element={<DonateList />} />
-        <Route path='/servers' element={<ServerList />} />
-        <Route path='/rules' element={<RulesList />} />
-        <Route path='/referralSystem' element={<Referral />} />
-        <Route path='/servers/:server' element={<Server />} />
-        <Route path='/start' element={<Start />} />
-        <Route path='/licence' element={<Licence />} />
-        <Route path='/processing' element={<Processing />} />
-        <Route path='/team' element={<Team />} />
+        <Route path={ HOME_ROUTE } element={<Home />} />
+        <Route path={ ARTICLE_ROUTE } element={<NewsFlashPage />} />
+        <Route path={ CABINET_ROUTE } element={<PersonalCabinetPage />} />
+        <Route path={ DONATE_ROUTE } element={<DonateList />} />
+        <Route path={ SERVERS_ROUTE } element={<ServerList />} />
+        <Route path={ RULES_ROUTE } element={<RulesList />} />
+        <Route path={ REFERRAL_ROUTE } element={<Referral />} />
+        <Route path={ SERVER_ROUTE } element={<Server />} />
+        <Route path={ START_GAME_ROUTE } element={<Start />} />
+        <Route path={ LICENSE_ROUTE } element={<Licence />} />
+        <Route path={ PROCESSING_ROUTE } element={<Processing />} />
+        <Route path={ TEAM_ROUTE } element={<Team />} />
         <Route path='*' element={<Navigate to="/404" />} />
-        <Route path='/404' element={<NotFound />} />
+        <Route path={ ERROR_ROUTE } element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )

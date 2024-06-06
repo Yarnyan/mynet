@@ -113,10 +113,6 @@
         max-height: 90%;
         overflow-y: auto;
         -ms-overflow-style: none; 
-        // height: 100%;
-    }
-    .centeredModalDonate {
-        height: 100%;
     }
     .centeredModal label {
         font-size: 14px;
@@ -139,7 +135,6 @@
     }
     .modal-content {
         width: 250px;
-        background-color: red;
     }
     .osButtons button {
         margin: 0;
@@ -150,11 +145,7 @@
     .donatContainer {
         flex-direction: column;
         height: 100%;
-        margin-top: 0px !important;
-        max-height: 100%;
-        overflow: auto;
-        -ms-overflow-style: none;
-        scrollbar-width: none;  
+        margin-top: 100px;
     }
     .modalInput {
         margin-left: 0px !important;
@@ -166,8 +157,5 @@
     .modalInput button {
         font-size: 12px;
         padding: 8px 10px;
-    }
-    .donatePossibilities p {
-        padding: 4px 0;
     }
 }

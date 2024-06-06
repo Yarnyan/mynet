@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Profile.module.scss'
 import {Link} from 'react-router-dom'
+import { CABINET_ROUTE, REFERRAL_ROUTE } from '../../routes/Route';
 export default function Profile() {
     const handleLogout = () => {
         console.log('a')
@@ -19,8 +20,8 @@ export default function Profile() {
             </div>
         </div>
         <div className={styles.Profile__container_tools}>
-            <Link to={'/PersonalCabinet'}>Личный кабинет</Link>
-            <Link className={styles.Profile__tools_ref} to={'/referralSystem'}>Реферальная система</Link>
+            <Link to={CABINET_ROUTE}>Личный кабинет</Link>
+            <Link className={styles.Profile__tools_ref} to={REFERRAL_ROUTE}>Реферальная система</Link>
         </div>
         <div className={styles.Profile__btn}>
             <button onClick={handleLogout}>Выйти</button>

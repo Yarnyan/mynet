@@ -4,6 +4,7 @@ import { Button } from 'reactstrap';
 import RegistrationModule from '../../module/registration/RegistrationModule';
 import LauncherDownloadModal from '../../module/modal/LauncherDownloadModal';
 import { useNavigate } from 'react-router-dom';
+import { SERVERS_ROUTE } from '../../routes/Route';
 
 export default function StartPlayingComponent({ id, subtitle, title, buttonTitle }) {
     const [showRegistrationModal, setShowRegistrationModal] = useState(false);
@@ -58,7 +59,7 @@ export default function StartPlayingComponent({ id, subtitle, title, buttonTitle
                     {buttonTitle}
                 </button>
             ) : (
-                <button className={styles.button} onClick={() => navigate('/servers')}>
+                <button className={styles.button} onClick={() => navigate(SERVERS_ROUTE)}>
                     {buttonTitle}
                 </button>
             )}
